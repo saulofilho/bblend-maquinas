@@ -81,3 +81,7 @@ typings/
 /speed-master/src/less-example.less
 /speed-master/src/sass-example.scss
 /speed-master/src/sprite/*
+
+# src-bblend-maquinas .psd
+/src-bblend-maquinas/assets/psds
+/src-bblend-maquinas/assets/_fonts

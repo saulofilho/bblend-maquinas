@@ -1,0 +1,407 @@
+/* SASS VARS */
+$gil-black: Gilroy-Black, sans-serif;
+$gil-bold: Gilroy-Bold, sans-serif;
+$gil-regular: Gilroy-Regular, sans-serif;
+$gil-medium: Gilroy-Medium, sans-serif;
+$color-black: black;
+$color-pink: rgba(255,1,127,1);
+$color-pink-dark: rgba(184,20,85,1);
+$color-white: white;
+$color-gray-light: rgba(106,106,106,1);
+$color-gray-bg-vendas: #eaeaea;
+$color-gray-dark: rgba(36,36,35,1);
+$color-purple: rgba(101,22,197,1);
+$color-yellow: rgba(255,228,0,1);
+$color-blue: rgba(61,156,252,1);
+$color-red: rgba(255,59,49,1);
+/* FONT-FACE */
+@font-face {
+  font-family: 'Gilroy-Black';
+  src: url("/arquivos/Gilroy-Black.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-BlackItalic';
+  src: url("/arquivos/Gilroy-BlackItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url("/arquivos/Gilroy-Bold.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-BoldItalic';
+  src: url("/arquivos/Gilroy-BoldItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Extrabold';
+  src: url("/arquivos/Gilroy-Extrabold.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-ExtraboldItalic';
+  src: url("/arquivos/Gilroy-ExtraboldItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Heavy';
+  src: url("/arquivos/Gilroy-Heavy.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-HeavyItalic';
+  src: url("/arquivos/Gilroy-HeavyItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url("/arquivos/Gilroy-Light.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-LightItalic';
+  src: url("/arquivos/Gilroy-LightItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url("/arquivos/Gilroy-Medium.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-MediumItalic';
+  src: url("/arquivos/Gilroy-MediumItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("/arquivos/Gilroy-Regular.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-RegularItalic';
+  src: url("/arquivos/Gilroy-RegularItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Semibold';
+  src: url("/arquivos/Gilroy-Semibold.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-SemiboldItalic';
+  src: url("/arquivos/Gilroy-SemiboldItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-Thin';
+  src: url("/arquivos/Gilroy-Thin.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-ThinItalic';
+  src: url("/arquivos/Gilroy-ThinItalic.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-UltraLight';
+  src: url("/arquivos/Gilroy-UltraLight.otf.css");
+}
+@font-face {
+  font-family: 'Gilroy-UltraLightItalic';
+  src: url("/arquivos/Gilroy-UltraLightItalic.otf.css");
+}
+/* RULES */
+*, 
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+a:hover {
+  color: $color-yellow !important;
+}
+.txt-yellow-desk {
+  color: $color-yellow;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 14px;
+}
+.tit-white-desk {
+  color: $color-white;
+  font-family: $gil-bold;
+  text-align: center;
+  font-size: 24px;
+}
+.text-white-desk {
+  color: $color-white;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 14px;
+}
+.whatsapp-selo-desk span {
+  background-image: url("/arquivos/whats-app-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* DESTAQUE MOB */
+.dest-gif-desk {
+  background-color: $color-pink-dark;
+}
+/* SMART MOB */
+.smart-mob {
+  background-color: wheat;
+}
+.content-menu-mob {
+  width: 400px;
+  height: 300px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+/* YELLOW MOBILE */
+.yellow-mob {
+  background-color: $color-yellow;
+  height: auto;
+}
+
+/* BLUE MOBILE */
+.blue-mob {
+  background-color: $color-blue;
+  height: auto;
+}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx DESKTOP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* DESTAQUE DESKTOP */
+.img-capsulas-desk {
+  height: auto;
+}
+.img-capsulas-desk span {
+  background-image: url("/arquivos/capsulas-destaque.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
+}
+.btn-play-white span {
+  background-image: url("/arquivos/btn-play-white.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* PURPLE DESKTOP */
+.purple-desk {
+  height: 700px;
+  background-color: $color-purple;
+}
+
+/* SMART DESKTOP */
+.smart-desk {
+  height: auto;
+  background-color: $color-pink;
+}
+.wrap-menu-smart-desk {
+  height: auto;
+  float: left;
+}
+.maca-svg-desk {
+  content: "";
+  background-image: url("/arquivos/maca.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+
+
+
+/* VENDAS 1 E VENDAS 2 DESKTOP */
+.vendas1-desk {
+  height: 700px;
+  background-color: $color-gray-bg-vendas;
+}
+.swi-con-vendas {
+  width: 400px;
+  height: 300px;
+}
+.swi-sli-vendas {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+/* PRODUTOS DESKTOP */
+.produtos-desk {
+  height: 700px;
+  background-color: greenyellow;
+}
+
+
+/* RED DESKTOP */
+.red-desk {
+  height: 700px;
+  background-color: $color-red;
+}
+
+
+/* YELLOW DESKTOP */
+.yellow-desk {
+  height: 700px;
+  background-color: $color-yellow;
+}
+
+
+/* BLUE DESKTOP */
+.blue-desk {
+  height: 700px;
+  background-color: $color-blue;
+}
+
+/* DUVIDAS DESKTOP*/
+.duvidas-desk {
+  max-width: 900px;
+  height: 700px;
+  background-color: $color-white;
+}
+.card-header {
+  padding: 0 !important;
+}
+.tit-duvidas {
+  text-align: center;
+}
+.text-duvidas {
+  text-align: center;
+}
+.tit-duvidas-mob {
+  color: #ff017f;
+  font-family: 'Gilroy-Bold';
+  text-align: center;
+  font-size: 32px;
+  margin: 50px 0 10px 0;
+}
+.text-duvidas-mob {
+  color: white;
+  font-family: 'Gilroy-Regular';
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 0;
+  line-height: 22px;
+}
+.card-header,
+.card-body {
+  background-color: black !important;
+  color: rgba(116,116,116,1);
+  font-family: 'Gilroy-Regular';
+}
+.card-header {
+  border-bottom: 2px solid rgba(184,20,85,1)!important;
+}
+.card-header h2 {
+  font-family: 'Gilroy-Regular';
+}
+.card {
+  background-color: black !important;
+  background-clip: border-box;
+}
+button.btn.btn-link {
+  color: rgba(255,255,255,1);
+  text-align: left;
+  text-decoration: none;
+}
+.accordion {
+  margin-bottom: 100px;
+}
+.arrow-up::after {
+  font-family: "Font Awesome 5 Pro"; 
+  font-weight: 900; 
+  content: "\f078";
+  position: absolute;
+  right: 8px;
+  top: 7px;
+}
+.arrow-down::after {
+  content: "\f077";
+}
+
+/* FOOTER DESKTOP */
+.footer-style-mob {
+  background-color: #ff017f;
+}
+.logos-mob {
+  justify-content: space-evenly;
+}
+.logos-mob img {
+  margin-top: 30px;
+}
+.text-footer p {
+  font-family: 'Gilroy-Regular';
+  font-size: 12px;
+  line-height: 18px;
+  margin: 1rem;
+}
+.copy {
+  background-color: white;
+  color: black;
+  justify-content: center;
+}
+.copy p {
+  font-family: 'Gilroy-Regular';
+  font-size: 10px;
+  margin: 1rem;
+}
+
+/* MEDIA SCREEN MOBILE AND DESKTOP*/
+@media screen and (max-width: 768px) {
+  .hide-max-768,
+  #ajaxBusy {
+      display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hide-min-768,
+  #ajaxBusy {
+      display: none !important;
+  }
+}
