@@ -1,7 +1,7 @@
 'use strict';
 
 //swiper carousel desktop
-let swiper = new Swiper('.swi-con-vendas', {
+let swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 30,
@@ -9,7 +9,7 @@ let swiper = new Swiper('.swi-con-vendas', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    dynamicBullets: true
+    dynamicBullets: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -17,20 +17,6 @@ let swiper = new Swiper('.swi-con-vendas', {
   },
 });
 
-//swiper carousel smart mob
-let contentMenu = new Swiper('.content-menu-mob', {
-  spaceBetween: 10,
-  slidesPerView: 5,
-  freeMode: true,
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-});
-let contentSmart = new Swiper('.content-smart-mob', {
-  spaceBetween: 10,
-  thumbs: {
-    swiper: contentMenu
-  }
-});
 
 //img btn seta mob
 $(document).ready(function() {

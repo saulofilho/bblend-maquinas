@@ -124,6 +124,18 @@ a:hover {
   text-align: center;
   font-size: 14px;
 }
+.text-darkGray-desk {
+  color: $color-gray-dark;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 14px;
+}
+.text-darkPink-desk {
+  color: $color-pink-dark;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 24px;
+}
 .whatsapp-selo-desk span {
   background-image: url("/arquivos/whats-app-icon.png");
   background-position: center;
@@ -135,24 +147,10 @@ a:hover {
   bottom: 0;
   right: 0;
 }
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-/* DESTAQUE MOB */
-.dest-gif-desk {
-  background-color: $color-pink-dark;
-}
-/* SMART MOB */
-.smart-mob {
-  background-color: wheat;
-}
-.content-menu-mob {
-  width: 400px;
-  height: 300px;
-}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -166,7 +164,30 @@ a:hover {
   -webkit-align-items: center;
   align-items: center;
 }
+.footer-style {
+  background-color: $color-pink-dark;
+  height: auto;
+}
 
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* DESTAQUE MOB */
+.dest-gif-desk {
+  background-color: $color-pink-dark;
+}
+/* SMART MOB */
+.smart-mob {
+  background-color: wheat;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swi-sli-mob {
+  width: 100% !important;
+}
+.smart-maca-mob {
+  background-color: orange;
+}
 
 /* YELLOW MOBILE */
 .yellow-mob {
@@ -179,6 +200,9 @@ a:hover {
   background-color: $color-blue;
   height: auto;
 }
+
+/* FOOTER MOBILE */
+
 
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx DESKTOP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -210,6 +234,29 @@ a:hover {
   bottom: 0;
   right: 0;
 }
+.whatsapp-selo-desk {
+  width: 110px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.whatsapp-selo-desk:hover {
+  width: 150px;
+  background-color: blue;
+}
+.whatsapp-selo-desk span {
+  background-image: url("/arquivos/whatsapp-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
 /* PURPLE DESKTOP */
 .purple-desk {
@@ -226,20 +273,6 @@ a:hover {
   height: auto;
   float: left;
 }
-.maca-svg-desk {
-  content: "";
-  background-image: url("/arquivos/maca.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-
 
 
 
@@ -274,7 +307,7 @@ a:hover {
 
 /* PRODUTOS DESKTOP */
 .produtos-desk {
-  height: 700px;
+  height: auto;
   background-color: greenyellow;
 }
 
