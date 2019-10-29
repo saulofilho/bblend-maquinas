@@ -18,20 +18,7 @@ let swiper = new Swiper('.swiper-container', {
 });
 
 
-//img btn seta mob
-$(document).ready(function() {
-  $(".btn-seta-gin-mob").click(function() {
-    $(".img-seta-gin-mob").toggle();
-  });
-  $(".btn-seta-orange-mob").click(function() {
-    $(".img-seta-orange-mob").toggle();
-  });
-  $(".btn-seta-skol-mob").click(function() {
-    $(".img-seta-skol-mob").toggle();
-  });
-});
-
 //accordion button arrow
 function accFunc(x) {
   x.classList.toggle("arrow-down");
-}
+};
