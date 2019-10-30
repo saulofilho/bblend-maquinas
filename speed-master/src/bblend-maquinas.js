@@ -1,5 +1,12 @@
 'use strict';
 
+//btns smart
+$('.btns').click(function() {
+	$('#content .container-fluid').hide();
+    let target = '#' + $(this).data('target');
+    $(target).show();
+});
+
 //swiper carousel desktop
 let swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
@@ -17,6 +24,13 @@ let swiper = new Swiper('.swiper-container', {
   },
 });
 
+//slick carousel enjoy
+$(document).ready(function() {
+  $('.prateleira ul').slick({
+    dots: true,
+    infinite: false
+  });
+});
 
 //accordion button arrow
 function accFunc(x) {

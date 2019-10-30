@@ -103,6 +103,9 @@ $color-red: rgba(255,59,49,1);
   padding: 0;
   box-sizing: border-box;
 } 
+li {
+  list-style-type: none;
+}
 a:hover {
   color: $color-yellow !important;
 }
@@ -140,6 +143,8 @@ a:hover {
   text-align: center;
   font-size: 24px;
 }
+
+/* WHATS APP */
 .whatsapp-selo-desk {
   width: 110px;
   height: 50px;
@@ -182,6 +187,42 @@ a:hover {
   -webkit-align-items: center;
   align-items: center;
 }
+
+/* HEADER */
+.menu-header {
+  display: flex;
+  background-color: transparent;
+  display: flex;
+  align-items: baseline;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.itens-right {
+  margin-left: auto;
+}
+.nav-menu-right ul li {
+  color: $color-white;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 1rem;
+}
+.nav-item {
+  padding: 1.2rem;
+}
+.nav-item a span {
+  border-left: 2px solid #b81455;
+  border-right: 2px solid #b81455;
+  border-radius: 0px 10px 0px 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+/* FOOTER */
 .footer-style {
   background-color: $color-pink-dark;
   height: auto;
@@ -190,6 +231,8 @@ a:hover {
   text-align: center;
   padding: 1.5rem;
 }
+
+
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* DESTAQUE MOB */
@@ -319,14 +362,111 @@ a:hover {
 /* SMART DESKTOP */
 .smart-desk {
   height: auto;
-  background-color: $color-pink;
+}
+.texts-smart-desk {
+  margin: 0 auto;
+  padding-top: 70px;
+}
+.box-pink-smart {
+  border: 5px solid $color-pink-dark;
+  border-radius: 40px 10px 40px 10px;
+  padding: 1rem;
+  background-color: $color-pink-dark;
+  margin-top: 250px;
+  overflow: hidden;
+}
+.purple-col-smart {
+  position: absolute;
+  right: 55px;
+}
+.box-purple-smart {
+  border: 5px solid $color-purple;
+  border-radius: 40px 10px 40px 10px;
+  padding: 1rem;
+  background-color: $color-purple;
+  margin-top: 180px;
+  overflow: hidden;
 }
 .wrap-menu-smart-desk {
-  height: auto;
-  float: left;
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
-
-
+.btns-smart-desk {
+  position: relative;
+}
+.maca-svg-desk img,
+.talheres-svg-desk img, 
+.tenis-svg-desk img, 
+.food-svg-desk img, 
+.drink-svg-desk img {
+  width: 50px;
+}
+#content {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+#maca {
+  background-image: url("img-smart-woman-desk_optimized.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#talheres {
+  background-image: url("/arquivos/img-smart-casal-desk_optimized.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#tenis {
+  background-image: url("/arquivos/img-smart-sport-desk_optimized.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#food {
+  background-image: url("/arquivos/img-smart-eat-desk_optimized.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#drink {
+  background-image: url("/arquivos/img-smart-girl-mob_optimized.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+svg {
+  width: 30px;
+}
 
 
 /* VENDAS 1 E VENDAS 2 DESKTOP */
@@ -367,8 +507,21 @@ a:hover {
 
 /* RED DESKTOP */
 .red-desk {
-  height: 700px;
-  background-color: $color-red;
+  position: relative;
+  width: 100%;
+  height: 770px;
+  background-color: $color-yellow;
+}
+.bg-red-desk {
+  background-image: url("/arquivos/red-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 
