@@ -1,0 +1,111 @@
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+
+
+<article
+    class="enjoy-box $product.CategoryName #if($product.HasBestPrice) withDe #else outDe #end #if($product.NumbersOfInstallment > 1) withAdicional #else outAdicional  #end #if ($product.IsInStock) comEstoque #else semEstoque #end"
+    data-idproduto="$id" data-department="$product.DepartmentName" data-category="$product.CategoryName"
+    data-category-link="$product.CategoryLink">
+
+    <div class="detalhes">
+        <div title="$escapedName" class="image" data-idproduto="$id">
+            $product.GetImageTag(308,308)
+            $product.ProductField(8)
+        </div>
+
+        <div class="options">
+            #if ($product.IsInStock && $product.DepartmentName == "Bebidas")
+            <select>
+                <option value="">--</option>
+            </select>
+            #end
+        </div>
+
+        <a href="$uri" title="$escapedName" class="prod-info">
+
+            <div class="nome">$product.Name</div>
+            <!-- <div class="descricao">$product.DescriptionShort</div> -->
+
+            <div class="shelf-rating avaliacao$product.EvaluationRate"></div>
+
+            <div class="FlagsHightLight">
+                #if ($product.IsInStock)
+                $product.DiscountHightLight
+                $product.HightLight
+                #else
+                $product.DiscountHightLight
+                $product.HightLight
+                <p class="flag -bbl--indisponivel">Produto indisponível</p>
+                #end
+            </div>
+
+            <!-- NEW MODEL PRICE -->
+            #if ($product.IsInStock)
+            <div class="price">
+                <p class="de">
+                    #if ($product.HasBestPrice)
+                    <span class="txtDe">De: </span>
+                    <span class="val">$product.ListPrice</span>
+                    <span class="txtPor">Por</span>
+                    #end
+                </p>
+                <div class="txts-preco-promo">
+                    <div class="descricao">
+                        <p>
+                            Plataforma de bebidas + purificador
+                        </p>
+                        <span class="saiba-mais">
+                            <a href="/">
+                                Saiba +
+                            </a>
+                        </span>
+                    </div>
+                    <div class="por-box">
+                        <p class="por">
+                            <span class="preco-promo">preço promocinal</span>
+                            #if ($product.NumbersOfInstallment > 1)
+                            $product.NumbersOfInstallment<span>x</span> de $product.InstallmentValue <span class="juros">sem
+                                juros</span>
+                            <span class="total-parcelado">Total parcelado:
+                                #end
+                                <span class="val">$product.BestPrice</span></span>
+                        </p>
+                    </div>
+                    <p class="discount-boleto hide">
+                        à vista no boleto: $product.BestPrice
+                    </p>
+                    <p class="discount-cartao hide">
+                        à vista no cartão: $product.BestPrice
+                    </p>
+                </div>
+            </div>
+            #else
+            <div class="indisponivel">
+                Produto indisponível
+                <span class="btn-unavailable">Seja avisado quando estiver disponível</span>
+            </div>
+            #end
+            <!-- NEW MODEL PRICE -->
+        </a>
+    </div>
+
+    <div class="botoes">
+        #if ($product.DepartmentName == "Bebidas")
+        #if ($product.IsInStock)
+        $product.BottomBuyAsynchronous
+        #end
+        #else
+        #if ($product.IsInStock)
+        <div class="btn-buy-enjoy">
+            <a href="$uri" title="Adicionar">
+                <span>Quero uma B.blend $product.CategoryName</span>
+            </a>
+        </div>
+        #else
+        <!--<button class="btn-eu-quero">Reservar</button>-->
+        <a href="$uri" title="Reservar" class="btn-eu-quero">Reserve a sua</a>
+        #end
+        #end
+    </div>
+</article>
