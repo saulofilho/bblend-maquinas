@@ -204,7 +204,7 @@ a:hover {
   // background: rgba(0,0,0,0.8);
   // backdrop-filter: saturate(180%) blur(20px);
   top: 0;
-  transition: all 0.6s ease 0.2s;
+  transition: top 0.2s ease-in-out;
 }
 .menu-sandwich {
   display: inline-block;
@@ -248,6 +248,12 @@ a:hover {
   margin: 0 20px;
   margin-top: 12px;
 }
+@media screen and (max-width: 992px) {
+  .nav-item {
+    margin: 0;
+    margin-top: 12px;
+  }
+}
 .nav-item a {
   color: $color-white;
   font-family: $gil-regular;
@@ -288,48 +294,174 @@ a:hover {
   text-align: center;
   padding: 1.5rem;
 }
-
-
+.img-logos-footer img {
+  width: 100%;
+  max-width: 200px;
+}
+.logo-amb-bras img {
+  width: 100%;
+  max-width: 111px;
+}
+.btn-left img,
+.btn-center img,
+.btn-right img {
+  width: 100%;
+}
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* DESTAQUE MOB */
-.dest-gif-mob {
+.group-destaque-mob {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 570px;
 }
 .gif-header {
-  background-image: url("/arquivos/gif-dest-mob.gif");
-  background-position: center;
+  content: "";
+  background-image: url(/arquivos/gif-dest-mob.gif);
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 }
-/* SMART MOB */
-.smart-mob {
-  background-color: wheat;
+.gif-header img {
+  width: 100%;
 }
+.caps-mob {
+  text-align: center;
+  position: relative;
+  top: 520px;
+}
+.caps-mob img {
+  width: 100%;
+  max-width: 280px;
+}
+@media screen and (max-width: 992px) {
+  .txt-yellow-desk {
+    position: relative;
+    top: 20px;
+    padding: 1rem;
+    text-transform: uppercase;
+    padding-top: 30px;
+  }
+}
+.text-white-mob {
+  color: $color-white;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.dest-mob {
+  background-color: $color-pink-dark;
+}
+.btn-white-pink-mob {
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 30px;
+}
+.btn-white-pink-mob a img {
+  width: 100%;
+  max-width: 300px;
+}
+.btn-selo-dest-mob {
+  text-align: center;
+}
+.btn-selo-dest-mob a img {
+  width: 100%;
+  max-width: 150px;
+}
+
+/* SMART MOB */
 .swi-sli-mob {
   width: 100% !important;
 }
 .smart-maca-mob {
   background-color: orange;
 }
+@media screen and (max-width: 992px) {
+  .texts-smart-desk .tit-white-desk {
+    position: relative;
+    top: 190px;
+    padding: 2rem;
+  }
+}
+
+/* RED MOBILE */
+.btn-buy-red-mob a {
+  margin: 0 auto;
+}
+.btn-buy-red-mob a img {
+  width: 100%;
+  padding: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .tit-purple-desk {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
 
 /* YELLOW MOBILE */
-.yellow-mob {
-  background-color: $color-yellow;
-  height: auto;
+@media screen and (max-width: 992px) {
+  .yellow-desk {
+    position: relative;
+    height: auto;
+  }
+  .bg-yellow::after {
+    content: "";
+    background-image: url(/arquivos/gota-yellow.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -24px;
+    right: 0;
+    z-index: 1;
+  }
+}
+.btn-green-yellow {
+  text-align: center;
+  padding: 2rem;
+  z-index: 2;
+  position: relative;
+}
+.btn-green-yellow a img {
+  width: 100%;
+  max-width: 200px;
+}
+.selo-yellow-mob {
+  text-align: center;
+}
+.selo-yellow-mob img {
+  width: 100%;
+  max-width: 250px;
+}
+.tit-green-desk {
+  font-family: $gil-bold;
+  font-size: 2rem;
+  color: green;
+  text-align: center;
+  padding: 2rem;
+}
+.right-3d-mob img {
+  width: 100%;
+}
+.left-3d-mob img {
+  width: 100%;
 }
 
 /* BLUE MOBILE */
 .blue-mob {
   background-color: $color-blue;
   height: auto;
+}
+.img-blue-cel-mob {
+  background-image: url();
 }
 
 
@@ -370,6 +502,15 @@ a:hover {
 .btn-white-pink {
   padding: 0 1rem;
 }
+@media screen and (max-width: 992px) {
+  .btn-play-white {
+    padding: 1rem;
+    text-align: center;
+  }
+  .btn-play-white a img {
+    max-width: 222px;
+  }
+}
 .btn-play-white span {
   background-image: url("/arquivos/btn-play-white.png");
   background-position: center;
@@ -381,9 +522,20 @@ a:hover {
   bottom: 0;
   right: 0;
 }
+.btn-play-white a img {
+  width: 100%;
+}
 .dest-video-desk {
   position: relative;
-  height: 55vw;
+  height: 640px;
+}
+@media screen and (max-width: 1200px) {
+  .dest-video-desk {
+    height: auto;
+  }
+}
+.dest-video-desk .container {
+  padding-bottom: 40px;
 }
 .bg-video {
   position: absolute;
@@ -396,12 +548,7 @@ a:hover {
   z-index: -999;
 }
 .texts-dest-desk {
-  padding-top: 120px;
-}
-@media screen and (max-width: 1000px) {
-  .texts-dest-desk {
-    padding-top: 70px;
-  }
+  padding-top: 100px;
 }
 .texts-dest-desk .txt-yellow-desk {
   text-transform: uppercase;
@@ -616,6 +763,7 @@ svg {
 }
 .shelf-bblend-maquinas ul {
   max-width: 300px;
+  margin: 0 auto;
 }
 .por-box {
   border: 1px solid transparent;
@@ -644,7 +792,12 @@ svg {
   position: absolute;
 }
 */
-
+.slick-slide:focus { 
+  outline: none; 
+}
+.slick-slide a:focus { 
+  outline: none; 
+}
 
 /* PRODUTOS DESKTOP */
 .produtos-desk {
@@ -705,25 +858,39 @@ svg {
   position: relative;
   width: 100%;
   height: 762px;
-  background-color: $color-yellow;
+  background-color: $color-red;
+}
+@media screen and (max-width: 992px) {
+  .red-desk {
+    height: auto;
+  }
+  .bg-red-desk::after {
+    content: "";
+    background-image: url("/arquivos/gota-red.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -24px;
+    right: 0;
+  }
 }
 .bg-red-desk {
-  background-image: url("/arquivos/red-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  background-color: $color-red;
 }
 .gif-red-desk {
   text-align: right;
   margin-right: 30px;
 }
+@media screen and (max-width: 992px) {
+  .gif-red-desk {
+    margin-right: 0;
+  }
+}
 .gif-red-desk img {
-  width: 350px;
+  width: 100%;
 }
 .tit-yellow-red-1,
 .tit-yellow-red-2,
@@ -769,11 +936,41 @@ svg {
   bottom: 0;
   right: 0;
 }
+@media screen and (max-width: 992px) {
+  .tit-yellow-red-1::before {
+    background-position: top;
+    top: 20px;
+    left: 0;
+  }
+  .tit-yellow-red-2::before {
+    background-position: center;
+    top: -175px;
+    left: 0;
+  }
+  .tit-yellow-red-3::before {
+    background-position: center;
+    top: 50px;
+    left: 0;
+  }
+}
 .tit-yellow-red p {
   margin-bottom: 0;
 }
 .texts-red .text-white-desk {
   text-align: left;
+}
+@media screen and (max-width: 992px) {
+  .texts-red {
+    text-align: center;
+    padding-top: 60px;
+  }
+  .texts-red .text-white-desk,
+  .texts-red .tit-yellow-red-1,
+  .texts-red .tit-yellow-red-2,
+  .texts-red .tit-yellow-red-3 {
+    text-align: center;
+    margin-bottom: 0;
+  }
 }
 .btn-purple-red {
   position: relative;
@@ -781,7 +978,7 @@ svg {
 
 /* YELLOW DESKTOP */
 .yellow-desk {
-  height: 700px;
+  height: auto;
   background-color: $color-yellow;
 }
 .right-3d img {
