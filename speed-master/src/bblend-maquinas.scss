@@ -138,7 +138,7 @@ a:hover {
   text-align: center;
   font-size: 2.2rem;
   line-height: 40px;
-  margin-top: 90px;
+  padding-top: 60px;
   margin-bottom: 30px;
 }
 .text-white-desk {
@@ -248,12 +248,6 @@ a:hover {
   margin: 0 20px;
   margin-top: 12px;
 }
-@media screen and (max-width: 992px) {
-  .nav-item {
-    margin: 0;
-    margin-top: 12px;
-  }
-}
 .nav-item a {
   color: $color-white;
   font-family: $gil-regular;
@@ -339,15 +333,6 @@ a:hover {
   width: 100%;
   max-width: 280px;
 }
-@media screen and (max-width: 992px) {
-  .txt-yellow-desk {
-    position: relative;
-    top: 20px;
-    padding: 1rem;
-    text-transform: uppercase;
-    padding-top: 30px;
-  }
-}
 .text-white-mob {
   color: $color-white;
   font-family: $gil-regular;
@@ -381,13 +366,6 @@ a:hover {
 .smart-maca-mob {
   background-color: orange;
 }
-@media screen and (max-width: 992px) {
-  .texts-smart-desk .tit-white-desk {
-    position: relative;
-    top: 190px;
-    padding: 2rem;
-  }
-}
 
 /* RED MOBILE */
 .btn-buy-red-mob a {
@@ -397,33 +375,8 @@ a:hover {
   width: 100%;
   padding: 2rem;
 }
-@media screen and (max-width: 992px) {
-  .tit-purple-desk {
-    margin-top: 0;
-    padding-top: 30px;
-  }
-}
 
 /* YELLOW MOBILE */
-@media screen and (max-width: 992px) {
-  .yellow-desk {
-    position: relative;
-    height: auto;
-  }
-  .bg-yellow::after {
-    content: "";
-    background-image: url(/arquivos/gota-yellow.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: -24px;
-    right: 0;
-    z-index: 1;
-  }
-}
 .btn-green-yellow {
   text-align: center;
   padding: 2rem;
@@ -460,8 +413,20 @@ a:hover {
   background-color: $color-blue;
   height: auto;
 }
+.left-blue-mob {
+  position: relative;
+  height: 500px;
+}
 .img-blue-cel-mob {
-  background-image: url();
+  background-image: url("/arquivos/celulares-blue-mob.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 
@@ -502,15 +467,6 @@ a:hover {
 .btn-white-pink {
   padding: 0 1rem;
 }
-@media screen and (max-width: 992px) {
-  .btn-play-white {
-    padding: 1rem;
-    text-align: center;
-  }
-  .btn-play-white a img {
-    max-width: 222px;
-  }
-}
 .btn-play-white span {
   background-image: url("/arquivos/btn-play-white.png");
   background-position: center;
@@ -529,11 +485,7 @@ a:hover {
   position: relative;
   height: 640px;
 }
-@media screen and (max-width: 1200px) {
-  .dest-video-desk {
-    height: auto;
-  }
-}
+
 .dest-video-desk .container {
   padding-bottom: 40px;
 }
@@ -738,9 +690,6 @@ p.text-purple-box span {
 .smart-drink-desk {
   height: 700px;
 }
-svg {
-  width: 30px;
-}
 
 
 /* VENDAS 1 E VENDAS 2 DESKTOP */
@@ -798,12 +747,19 @@ svg {
 .slick-slide a:focus { 
   outline: none; 
 }
+.slick-list {
+  height: auto;
+}
 
 /* PRODUTOS DESKTOP */
 .produtos-desk {
   height: auto;
 }
+.tit-prod-desk {
+  text-align: center;
+}
 .swiper-container {
+  height: 555px;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -817,6 +773,13 @@ svg {
 }
 .swiper-slide-active {
   filter: blur(0);
+}
+.swiper-pagination {
+  bottom: 55px !important;
+}
+.btn-comprar-prod-desk {
+  position: relative;
+  top: -30px;
 }
 .wrapper-box-prod-desk {
   position: relative;
@@ -840,54 +803,83 @@ svg {
   height: 148px;
   overflow: hidden;
 }
-.suco-fruta-desk {
+.suco-fruta-cont,
+.nectares-cont,
+.frapes-cont {
   background: linear-gradient(119.16deg, #00FF00 0%, #FFDC1A 100%);
+  text-align: center;
 }
-.refri-desk {
+.refri-cont,
+.chas-gelados-cont,
+.energy-cont {
   background: linear-gradient(135deg, #0096FF 0%, #00E3FF 100%);
 }
-.suco-funcional-desk {
+.suco-funcional-cont,
+.cafes-cont,
+.chocolates-cont {
   background: linear-gradient(119.16deg, #FF6421 0%, #FE001B 100%);
 }
-.drinks-desk {
+.drinks-cont,
+.chas-quentes-cont,
+.drinks-cont {
   background: linear-gradient(119.16deg, #FF00C9 0%, #C500FF 100%);
+}
+.wrap-menu-prod-desk {
+  position: relative;
+  height: 100px;
+}
+.left-btn-prod-desk {
+  position: absolute;
+  top: 0;
+  left: 90px;
+  z-index: 1;
+}
+.center-btns-prod-desk {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.center-btns-prod-desk svg {
+  width: 58px;
+}
+.right-btn-prod-desk {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#Layer_1 {
+  margin-left: 45px;
 }
 
 /* RED DESKTOP */
 .red-desk {
   position: relative;
   width: 100%;
-  height: 762px;
+  height: auto;
   background-color: $color-red;
-}
-@media screen and (max-width: 992px) {
-  .red-desk {
-    height: auto;
-  }
-  .bg-red-desk::after {
-    content: "";
-    background-image: url("/arquivos/gota-red.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: -24px;
-    right: 0;
-  }
 }
 .bg-red-desk {
   background-color: $color-red;
 }
+.bg-red-desk::after {
+  content: "";
+  background-image: url("/arquivos/gota-red.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -24px;
+  right: 0;
+  z-index: 1;
+}
 .gif-red-desk {
   text-align: right;
   margin-right: 30px;
-}
-@media screen and (max-width: 992px) {
-  .gif-red-desk {
-    margin-right: 0;
-  }
 }
 .gif-red-desk img {
   width: 100%;
@@ -936,41 +928,11 @@ svg {
   bottom: 0;
   right: 0;
 }
-@media screen and (max-width: 992px) {
-  .tit-yellow-red-1::before {
-    background-position: top;
-    top: 20px;
-    left: 0;
-  }
-  .tit-yellow-red-2::before {
-    background-position: center;
-    top: -175px;
-    left: 0;
-  }
-  .tit-yellow-red-3::before {
-    background-position: center;
-    top: 50px;
-    left: 0;
-  }
-}
 .tit-yellow-red p {
   margin-bottom: 0;
 }
 .texts-red .text-white-desk {
   text-align: left;
-}
-@media screen and (max-width: 992px) {
-  .texts-red {
-    text-align: center;
-    padding-top: 60px;
-  }
-  .texts-red .text-white-desk,
-  .texts-red .tit-yellow-red-1,
-  .texts-red .tit-yellow-red-2,
-  .texts-red .tit-yellow-red-3 {
-    text-align: center;
-    margin-bottom: 0;
-  }
 }
 .btn-purple-red {
   position: relative;
@@ -978,6 +940,7 @@ svg {
 
 /* YELLOW DESKTOP */
 .yellow-desk {
+  position: relative;
   height: auto;
   background-color: $color-yellow;
 }
@@ -990,6 +953,19 @@ svg {
 .left-3d,
 .right-3d {
   text-align: center;
+}
+.bg-yellow::after {
+  content: "";
+  background-image: url(/arquivos/gota-yellow.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -24px;
+  right: 0;
+  z-index: 1;
 }
 
 /* BLUE DESKTOP */
@@ -1096,4 +1072,120 @@ button.btn.btn-link {
   font-family: 'Gilroy-Regular';
   font-size: 10px;
   margin: 1rem;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 640px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 992px) {
+  .texts-smart-desk .tit-white-desk {
+    position: relative;
+    top: 190px;
+    padding: 2rem;
+  }
+  .nav-item {
+    margin: 0;
+    margin-top: 12px;
+  }
+  .tit-purple-desk {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+  .yellow-desk {
+    position: relative;
+    height: auto;
+  }
+  .bg-yellow::after {
+    content: "";
+    background-image: url(/arquivos/gota-yellow.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -24px;
+    right: 0;
+    z-index: 1;
+  }
+  .btn-play-white {
+    padding: 1rem;
+    text-align: center;
+  }
+  .btn-play-white a img {
+    max-width: 222px;
+  }
+  .txt-yellow-desk {
+    position: relative;
+    top: 20px;
+    padding: 1rem;
+    text-transform: uppercase;
+    padding-top: 30px;
+  }
+  .texts-red {
+    text-align: center;
+    padding-top: 60px;
+  }
+  .texts-red .text-white-desk,
+  .texts-red .tit-yellow-red-1,
+  .texts-red .tit-yellow-red-2,
+  .texts-red .tit-yellow-red-3 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .red-desk {
+    height: auto;
+  }
+  .bg-red-desk::after {
+    content: "";
+    background-image: url("/arquivos/gota-red.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -24px;
+    right: 0;
+    z-index: 1;
+  }
+  .gif-red-desk {
+    margin-right: 0;
+  }
+  .wrapper-box-prod-desk {
+    width: 240px;
+    height: 170px;
+    top: -19px;
+    right: 0px;
+    left: 33px;
+  }
+  .tit-yellow-red-1::before {
+    background-position: top;
+    top: 20px;
+    left: 0;
+  }
+  .tit-yellow-red-2::before {
+    background-position: center;
+    top: -175px;
+    left: 0;
+  }
+  .tit-yellow-red-3::before {
+    background-position: center;
+    top: 50px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dest-video-desk {
+    height: auto;
+  }
+}
+
+
+.cls-1 {
+  fill: transparent !important;
 }

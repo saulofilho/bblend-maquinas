@@ -19,26 +19,32 @@ $('.btns-prod').click(function() {
     $(target).show();
 });
 
-//swiper carousel produtos
-let swiperSuco = new Swiper('.suco-fruta-desk', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 5,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 120,
-    depth: 300,
-    modifier: 1,
-    slideShadows: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    bullets: true,
-  },
+//slick carousel enjoy
+$('.helperComplement').remove();
+
+$(document).ready(function() {
+  $('.shelf-bblend-maquinas ul').slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    infinite: true,
+  });  
 });
 
-let swiperSucoFun = new Swiper('.suco-funcional-desk', {
+//accordion button arrow
+function accFunc(x) {
+  x.classList.toggle("arrow-down");
+};
+
+
+
+
+
+
+
+//swiper carousel produtos
+let swiperSucoFru = new Swiper('.suco-fruta-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
@@ -57,21 +63,193 @@ let swiperSucoFun = new Swiper('.suco-funcional-desk', {
     bullets: true,
   },
 });
-
-$('.helperComplement').remove();
-
-//slick carousel enjoy
-$(document).ready(function() {
-  $('.shelf-bblend-maquinas ul').slick({
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    infinite: true,
-  });  
+let swiperSucoFun = new Swiper('.suco-funcional-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
 });
-
-//accordion button arrow
-function accFunc(x) {
-  x.classList.toggle("arrow-down");
-};
+let swiperNec = new Swiper('.nectares-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperChaHot = new Swiper('.chas-quentes-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperCafes = new Swiper('.cafes-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperChoco = new Swiper('.chocolates-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperRefri = new Swiper('.refri-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperFrapes = new Swiper('.frapes-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperChasGel = new Swiper('.chas-gelados-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperDrinks = new Swiper('.drinks-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
+let swiperEnergy = new Swiper('.energy-cont', {
+  observer: true,
+  observeParents: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 5,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 120,
+    depth: 300,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    bullets: true,
+  },
+});
