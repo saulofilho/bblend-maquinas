@@ -1,5 +1,11 @@
 'use strict';
 
+//fade desktop
+$(window).scroll(function(){
+  $(".purple-desk").css("opacity", 1 - $(window).scrollTop() / 1250);
+});
+
+
 //header efeito
 let prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
@@ -60,10 +66,9 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-    mobileFirst: true,
   });  
 });
-$(window).on('orientationchange', function() {
+$(window).on('resize orientationchange', function() {
   $('.shelf-bblend-maquinas ul').slick('resize');
 });
 

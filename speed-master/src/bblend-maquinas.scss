@@ -148,6 +148,7 @@ a:hover {
 }
 .text-white-desk a {
   text-decoration: underline !important;
+  color: $color-white;
 }
 .text-darkGray-desk {
   color: $color-gray-dark;
@@ -247,15 +248,12 @@ a:hover {
   margin-top: 12px;
 }
 .nav-item a {
-  color: $color-white;
-  font-family: $gil-regular;
+  color: $color-gray-light;
+  font-family: $gil-bold;
   text-align: center;
   font-size: 0.8rem;
 }
 .nav-item a::before {
-//  border-left: 2px solid #b81455;
-//  border-right: 2px solid #b81455;
-//  border-radius: 0px 10px 0px 10px;
   content: url("/arquivos/bd-pink-left.png");
   position: absolute;
 }
@@ -294,10 +292,19 @@ a:hover {
   width: 100%;
   max-width: 111px;
 }
+.btn-left,
+.btn-center,
+.btn-right {
+  padding: 1rem;
+}
 .btn-left img,
-.btn-center img,
+.btn-center img {
+  width: 100%;
+  max-width: 150px;
+}
 .btn-right img {
   width: 100%;
+  max-width: 110px;
 }
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -385,6 +392,9 @@ a:hover {
 .wrap-menu-smart-mob button:focus {
   outline: none;
 }
+.btn-purple-group {
+  justify-content: center;
+}
 .box-purple-smart-mob {
   background-color: #6516c5;
   border: 0px solid #6516c5;
@@ -395,7 +405,7 @@ a:hover {
   overflow: hidden;
   opacity: 0.7;
   width: 270px;
-  height: 100px;
+  height: 115px;
 }
 .box-purple-smart-mob p.tit-purple-box {
   color: $color-white;
@@ -406,6 +416,10 @@ a:hover {
 }
 
 /* RED MOBILE */
+.btn-buy-red-mob {
+  position: relative;
+  z-index: 9;
+}
 .btn-buy-red-mob a {
   margin: 0 auto;
 }
@@ -461,7 +475,7 @@ a:hover {
 }
 .img-blue-cel-mob {
   background-image: url("/arquivos/celulares-blue-mob.png");
-  background-position: left;
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -470,7 +484,28 @@ a:hover {
   bottom: 0;
   right: 0;
 }
-
+.right-blue-mob .texts-top-blue .text-white-desk {
+  text-align: left;
+  font-size: 12px;
+}
+.right-blue-mob .texts-top-blue .text-white-desk span {
+  font-family: $gil-bold;
+}
+.right-blue-mob .texts-top-blue .btn-comprar-blue-desk,
+.right-blue-mob .texts-bottom-blue .btn-comprar-blue-desk {
+  text-align: left;
+}
+.right-blue-mob .texts-top-blue .btn-comprar-blue-desk a,
+.texts-bottom-blue .btn-comprar-blue-desk a {
+  font-size: 10px;
+}
+.texts-bottom-blue .text-white-desk {
+  text-align: left;
+  font-size: 12px;
+}
+.texts-bottom-blue .text-white-desk span {
+  font-family: $gil-bold;
+}
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx DESKTOP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* FIXED MENU */
@@ -532,6 +567,10 @@ a:hover {
 
 .dest-video-desk .container {
   padding-bottom: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 .bg-video {
   position: absolute;
@@ -554,10 +593,54 @@ a:hover {
   margin: 2rem;
 }
 
-/* PURPLE DESKTOP */
+/* PURPLE PARALLAX DESKTOP */
+.wrapped-purple-para {
+  background: $color-white;
+}
 .purple-desk {
-  height: 700px;
+  position: relative;
+  height: 600px;
   background-color: $color-purple;
+}
+.para-img-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 500px;
+}
+.para-img-2 {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+}
+.para-img-3 {
+  position: absolute;
+  right: 0;
+  bottom: -70px;
+}
+.para-img-4 {
+  position: absolute;
+  right: 0;
+  bottom: -55px;
+  left: 300px;
+}
+.para-img-1 img {
+  width: 100%;
+  max-width: 200px;
+}
+.para-img-2 img {
+  width: 100%;
+  max-width: 200px;
+}
+.para-img-3 img {
+  width: 100%;
+  max-width: 200px;
+}
+.para-img-4 img {
+  width: 100%;
+  max-width: 200px;
 }
 
 /* SMART DESKTOP */
@@ -670,7 +753,7 @@ p.text-purple-box span {
 #content {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 700px;
 }
 #maca {
   background-image: url("/arquivos/img-smart-woman-desk_optimized.png");
@@ -806,7 +889,6 @@ p.text-purple-box span {
 .vendas-desk {
   height: auto;
   background-color: $color-gray-bg-vendas;
-  margin-top: 200px;
 }
 .shelf-bblend-maquinas {
   width: 100%;
@@ -963,6 +1045,7 @@ p.text-purple-box span {
 /* PRODUTOS DESKTOP */
 .produtos-desk {
   height: auto;
+  background: $color-white;
 }
 .tit-prod-desk {
   text-align: center;
@@ -1078,6 +1161,10 @@ p.text-purple-box span {
   top: 0;
   right: 25px;
 }
+.text-produtos-desk {
+  background: white;
+  height: auto;
+}
 .text-produtos-desk .tit-darkPink-desk {
   padding: 50px 0 0;
   font-size: 2.2rem;
@@ -1133,7 +1220,6 @@ p.text-purple-box span {
   width: 100%;
   height: 620px;
   background-color: $color-red;
-  z-index: 10;
 }
 .bg-red-desk {
   background-color: $color-red;
@@ -1153,6 +1239,7 @@ p.text-purple-box span {
   left: 0;
   bottom: -24px;
   right: 0;
+  z-index: 2;
 }
 .gif-red-desk {
   text-align: right;
@@ -1169,7 +1256,7 @@ p.text-purple-box span {
   color: $color-yellow;
   font-family: $gil-bold;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 .tit-yellow-red-1::before {
   content: "";
@@ -1215,6 +1302,7 @@ p.text-purple-box span {
 }
 .texts-red .text-white-desk {
   text-align: left;
+  font-size: 14px;
 }
 .btn-purple-red {
   position: relative;
@@ -1225,7 +1313,7 @@ p.text-purple-box span {
 .btn-play-red {
   text-align: right;
   margin-right: 60px;
-  padding-top: 64px;
+  padding-top: 80px;
 }
 .btn-play-red a img {
   width: 100%;
@@ -1238,7 +1326,6 @@ p.text-purple-box span {
   position: relative;
   height: 620px;
   background-color: $color-yellow;
-  z-index: 1;
 }
 .right-3d {
   text-align: left;
@@ -1253,7 +1340,7 @@ p.text-purple-box span {
 .left-3d {
   text-align: right;
 }
-.bg-yellow::after {
+.bg-yellow::before {
   content: "";
   background-image: url("/arquivos/gota-yellow.png");
   background-position: bottom;
@@ -1264,7 +1351,7 @@ p.text-purple-box span {
   left: 0;
   bottom: -24px;
   right: 0;
-  z-index: -1;
+  z-index: 1;
 }
 .bg-yellow .row {
   padding-top: 60px;
@@ -1278,7 +1365,7 @@ p.text-purple-box span {
   position: absolute;
   top: 95px;
   left: 0;
-  right: 700px;
+  right: 600px;
   height: 60px;
 }
 .texts-yellow .text-darkGray-desk::before {
@@ -1289,7 +1376,7 @@ p.text-purple-box span {
   background-size: contain;
   position: absolute;
   top: 90px;
-  left: 600px;
+  left: 580px;
   bottom: 0;
   right: 0px;
   height: 60px;
@@ -1299,14 +1386,15 @@ p.text-purple-box span {
 .blue-desk {
   position: relative;
   width: 100%;
-  height: 770px;
+  height: 650px;
   background-color: $color-blue;
 }
 .center-blue {
   text-align: center;
 }
 .center-blue img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
 }
 .btn-comprar-blue-desk {
   text-align: right;
@@ -1337,6 +1425,8 @@ p.text-purple-box span {
   font-family: $gil-regular;
   text-align: right;
   margin-right: -20px;
+  padding-top: 160px;
+  padding-left: 120px;
 }
 .left-blue .text-white-desk span {
   font-family: $gil-bold;
@@ -1345,7 +1435,7 @@ p.text-purple-box span {
 .right-blue .text-white-desk {
   font-family: $gil-regular;
   text-align: left;
-  margin-right: 20px;
+  padding-right: 120px;
   padding-top: 160px;
 }
 .right-blue .text-white-desk span {
@@ -1363,6 +1453,7 @@ p.text-purple-box span {
   height: auto;
   background-color: $color-white;
   padding-top: 120px;
+  padding-bottom: 60px;
 }
 .card-header {
   padding: 0 !important;
@@ -1387,28 +1478,25 @@ p.text-purple-box span {
   margin: 20px 0;
   line-height: 22px;
 }
-.card-header,
 .card-body {
-  background-color: $color-pink-dark !important;
+  background-color: $color-gray-bg-vendas !important;
   color: rgba(116,116,116,1);
   font-family: 'Gilroy-Regular';
 }
 .card-header {
+  background-color: $color-pink-dark !important;
   border-bottom: 2px solid rgba(184,20,85,1)!important;
 }
 .card-header h2 {
   font-family: 'Gilroy-Regular';
 }
 .card {
-  background-clip: border-box;
+  border-radius: 10px;
 }
 button.btn.btn-link {
   color: rgba(255,255,255,1);
   text-align: left;
   text-decoration: none;
-}
-.accordion {
-  margin-bottom: 100px;
 }
 .arrow-up::after {
   font-family: "Font Awesome 5 Pro"; 
@@ -1448,25 +1536,140 @@ button.btn.btn-link {
   font-size: 10px;
   margin: 1rem;
 }
+.selos-footer-mob {
+  padding: 1rem;
+}
+.line-footer {
+  border-top: 5px solid $color-pink-dark;
+  border-bottom: 5px solid $color-gray-bg-vendas;
+}
+.border-footer {
+  border-left: 1px solid $color-gray-bg-vendas;
+  border-right: 1px solid $color-gray-bg-vendas;
+}
 
 /* MEDIA QUERY */
 @media screen and (max-width: 640px) {
-
+  .btn-left,
+  .btn-center,
+  .btn-right {
+    padding: 0;
+  }
+  .btn-left img,
+  .btn-center img {
+    max-width: auto;
+  }
+  .btn-right img {
+    max-width: auto;
+  }
+  .nome,
+  .descricao {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 768px) {
-
-}
-@media screen and (max-width: 992px) {
+  .texts-bottom-blue {
+    padding-top: 40px;
+  }
+  .right-blue-mob {
+    padding-top: 60px;
+  }
+  .blue-desk {
+    height: auto;
+  }
+  .nav-item a {
+    color: $color-white;
+  }
   .text-purple-box {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .btn-green-yellow {
+    text-align: center;
+    position: relative;
+    padding-bottom: 0;
+  }
+  .texts-yellow .text-darkGray-desk::before {
+    display: none;
+  }
+  .texts-yellow .text-darkGray-desk::after {
+    display: none;
+  }
+  .right-3d-mob {
+    position: relative;
+    left: -25px;
+    padding-bottom: 80px;
+  }
+  .left-3d-mob {
+    position: relative;
+    left: -25px;
+    padding-bottom: 30px;
+  }
+  .btn-buy-red-mob {
+    padding-bottom: 30px;
+  }
+  .btn-play-red {
+    text-align: center;
+    margin-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 9;
+    position: relative;
+  }
+  .links-bottom-vendas-desk .frete-vendas1-desk,
+  .links-bottom-vendas-desk .comparar-vendas1-desk {
+    text-align: center;
+  }
+  .links-bottom-vendas-desk {
+    padding-bottom: 50px;
+  }
+  .links-bottom-vendas-desk div {
+    text-align: center;
+    line-height: 10px;
+  }
+  .links-bottom-vendas-desk div a {
+    font-size: 10px;
+    text-align: center;
+  }
+  .wrap-menu-prod-desk::before {
+    content: "";
+    position: absolute;
+    background: #efefef;
+    width: auto;
+    height: 60px;
+    left: -40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .center-btns-prod-desk::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  .center-btns-prod-desk {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-left: 40%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .center-btns-prod-desk svg {
+    width: 60px;
   }
   #btn1::before,
   #btn2::before,
   #btn3::before,
   #btn4::before,
   #btn5::before,
-  #btn-pro1,
-  #btn-pro11 {
+  #btn-pro1::before,
+  #btn-pro11::after {
     display: none;
   }
   #btn5 {
@@ -1478,6 +1681,12 @@ button.btn.btn-link {
     width: 60px;
     border-radius: 30px 0px 0px 30px;
     height: auto;
+  }
+  .swiper-container {
+    height: 800px;
+  }
+  .swiper-pagination {
+    top: 625px !important;
   }
   .texts-smart-desk .tit-white-desk {
     position: relative;
@@ -1526,6 +1735,7 @@ button.btn.btn-link {
   .texts-red {
     text-align: center;
     padding-top: 60px;
+    padding-right: 0;
   }
   .texts-red .text-white-desk,
   .texts-red .tit-yellow-red-1,
@@ -1536,19 +1746,6 @@ button.btn.btn-link {
   }
   .red-desk {
     height: auto;
-  }
-  .bg-red-desk::after {
-    content: "";
-    background-image: url("/arquivos/gota-red.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: -24px;
-    right: 0;
-    z-index: 1;
   }
   .gif-red-desk {
     margin-right: 0;
@@ -1567,7 +1764,7 @@ button.btn.btn-link {
   }
   .tit-yellow-red-2::before {
     background-position: center;
-    top: -175px;
+    top: -195px;
     left: 0;
   }
   .tit-yellow-red-3::before {

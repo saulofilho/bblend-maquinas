@@ -49,7 +49,7 @@
         <!-- destaque desktop -->
             <div class="container-fluid dest-video-desk d-lg-block d-none">
                 <div class="bg-video">
-                    <video autoplay="true" loop="true">
+                    <video autoplay="autoplay" loop="loop" muted="muted">
                         <source src="https://bblend-maquinas.s3-sa-east-1.amazonaws.com/video-destaque.mp4" type="video/mp4" />
                         <source src="https://bblend-maquinas.s3-sa-east-1.amazonaws.com/video-destaque.webm" type="video/webm" />
                         <source src="https://bblend-maquinas.s3-sa-east-1.amazonaws.com/video-destaque.ogv" type="video/ogg" />
@@ -140,17 +140,24 @@
                 </div>
             </div>
         <!-- destaque mob -->
-        <!-- efeito purple desktop -->
+        <!-- purple parallax desktop -->
+        <div class="wrapped-purple-para">
             <div class="container-fluid purple-desk d-lg-block d-none">
-                <div class="tit-white-desk">
-                    <p>
-                        Todas as suas manhãs saudáveis
-                        <br />
-                        e gostosas com um nutritivo suco verde
-                    </p>
+                <div class="para-img-1">
+                    <img src="/arquivos/cap-pessego.png" alt="" />
+                </div>
+                <div class="para-img-2">
+                    <img src="/arquivos/cap-uva.png" alt="" />
+                </div>
+                <div class="para-img-3">
+                    <img src="/arquivos/cap-mix-frutas.png" alt="" />
+                </div>
+                <div class="para-img-4">
+                    <img src="/arquivos/cap-guarana.png" alt="" />
                 </div>
             </div>
-        <!-- efeito purple desktop -->
+        </div>
+        <!-- purple parallax desktop -->
         <!-- smart -->
             <div class="smart-desk" id="conheca">
                 <div class="btns-smart-desk">
@@ -158,7 +165,9 @@
                         <div class="wrap-menu-smart-desk">
                             <button type="button" id="btn1" data-target="maca" class="btns maca-svg-desk">
                                 <span>
-                                    <svg id="orange-svg" enable-background="new 0 0 509.562 509.562" viewBox="0 0 509.562 509.562" width="512"
+                                    <svg 
+                                        id="orange-svg" enable-background="new 0 0 509.562 509.562" 
+                                        viewBox="0 0 509.562 509.562"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="m266.243 111.9c-1.044-3.27-2.222-6.468-3.531-9.596 45.661 2.49 85.39-30.51 91.532-75.665.902-6.629-2.415-13.119-8.316-16.27-45.3-24.192-101.456-4.456-121.719 42.613-16.351-12.883-34.499-21.978-49.997-28.928-8.062-3.618-17.53-.011-21.147 8.051-3.616 8.063-.011 17.531 8.051 21.147 29.523 13.241 58.116 30.035 71.216 59.585-99.198 11.19-176.55 95.587-176.55 197.726 0 109.729 89.271 199 199 199s199-89.271 199-199c-.001-105.882-83.125-192.703-187.539-198.663zm53.364-77.817c-10.025 27.192-39.186 42.108-67.108 34.303 10.022-27.191 39.183-42.107 67.108-34.303zm-64.826 443.479c-92.084 0-167-74.916-167-167 0-87.099 67.028-158.825 152.209-166.337.786 9.726.428 20.229-1.071 31.576-1.157 8.76 5.006 16.8 13.767 17.958 8.8 1.16 16.805-5.044 17.958-13.767 1.661-12.571 2.153-24.394 1.486-35.531 83.962 8.706 149.652 79.875 149.652 166.102-.001 92.083-74.917 166.999-167.001 166.999z" />
@@ -443,7 +452,7 @@
                                     </div>
                                     <div class="col col-lg-4 purple-col-smart">
                                         <div class="box-purple-smart">
-                                            <p class="text-purple-box">
+                                            <p class="tit-purple-box">
                                                 SER SMART É:
                                             </p>
                                             <p class="text-purple-box">
@@ -973,12 +982,12 @@
                         Pensa numa bebida gostosa. <span>A gente tem!</span>
                     </p>
                 </div>
-                <div class="container btn-prod">
+                <div class="btn-prod">
                     <div class="wrap-menu-prod-desk">
                         <!-- <div class="left-btn-prod-desk d-lg-flex d-none">
                             <img src="/arquivos/sabores-pink.png" alt="" />
                         </div> -->
-                        <div class="center-btns-prod-desk">
+                        <div class="center-btns-prod-desk dragscroll">
                             <button type="button" id="btn-pro1" data-target="suco-fruta" class="btns-prod suco-fruta-svg-desk">
                                 <span>
                                     <svg id="sucos-fruta-svg" data-name="sucos fruta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
@@ -2063,7 +2072,7 @@
                             Precisando repor suas cápsulas?
                         </p>
                     </div>
-                    <div class="row d-lg-flex d-none">
+                    <div class="row d-md-flex d-none">
                         <div class="col-4 left-blue">
                             <p class="text-white-desk">
                                 <span>Compra online</span>
@@ -2082,6 +2091,7 @@
                         <div class="col-4 right-blue">
                             <p class="text-white-desk">
                                 <span>Assinatura mensal</span>
+                                <br />
                                 Receba mensalmente e faça parte do clube B.blend.
                             </p>
                             <div class="btn-comprar-blue-desk">
@@ -2091,7 +2101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row d-flex d-lg-none group-blue-mob">
+                    <div class="row d-flex d-md-none group-blue-mob">
                         <div class="col-6 left-blue-mob">
                             <div class="img-blue-cel-mob"></div>
                         </div>
@@ -2125,13 +2135,55 @@
             </div>
         <!-- blue -->
         <!-- vendas 2 -->
-
+        <div id="compre-agora2" class="container-fluid vendas-desk">
+            <div class="container">
+                <div class="texts-vendas">
+                    <p class="tit-purple-desk">
+                        Prepare-se para novas experiências e elogios
+                    </p>
+                    <p class="text-gray-desk">
+                        Somente hoje com condições especiais e brindes únicos. <span>Aproveita!</span>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6 enjoy-vendas">
+                        <section class="vitrine-enjoy-desk">
+                            <div class="arrow-prev arrow-prev-enjoy"></div>
+                            <div class="arrow-next arrow-next-enjoy"></div>
+                            <vtex:contentPlaceHolder id="enjoy-carousel2" />
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-6 unplug-vendas">
+                        <section class="vitrine-unplug-desk">
+                            <div class="arrow-prev arrow-prev-unplug"></div>
+                            <div class="arrow-next arrow-next-unplug"></div>
+                            <vtex:contentPlaceHolder id="unplug-carousel2" />
+                        </section>
+                    </div>
+                </div>
+                <div class="row links-bottom-vendas-desk">
+                    <div class="col-4 comparar-vendas1-desk">
+                        <a href="#" data-toggle="modal" data-target="#modalComparacao">Comparar Máquinas</a>
+                    </div>
+                    <div class="col-4 especifica-vendas1-desk">
+                        <a href="#">Especificação Técnica</a>
+                    </div>
+                    <div class="col-4 frete-vendas1-desk">
+                        <a href="#" data-toggle="modal" data-target="#modalFrete">Frete e tempo de entrega</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- vendas 2 -->
         <!-- duvidas-->
             <div class="container-fluid duvidas-desk">
-                <h2 class="tit-duvidas-mob">Ainda com dúvidas?</h2>
-                <p class="text-duvidas-mob">Separamos as respostas completas de algumas das perguntas mais comuns que
-                    recebemos.</p>
+                <h2 class="tit-duvidas-mob">
+                    Ainda com dúvidas?
+                </h2>
+                <p class="text-duvidas-mob">
+                    Separamos as <span>respostas completas</span> de algumas das perguntas mais comuns que
+                    recebemos.
+                </p>
                 <div class="accordion" id="accordionExample">
                     <div class="card">
                         <div class="card-header" id="headingOne">
