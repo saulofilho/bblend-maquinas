@@ -1,4 +1,3 @@
-/* SASS VARS */
 $gil-black: Gilroy-Black, sans-serif;
 $gil-bold: Gilroy-Bold, sans-serif;
 $gil-regular: Gilroy-Regular, sans-serif;
@@ -138,21 +137,21 @@ a:hover {
   text-align: center;
   font-size: 2.2rem;
   line-height: 40px;
-  padding-top: 60px;
+  padding-top: 70px;
   margin-bottom: 30px;
 }
 .text-white-desk {
   color: $color-white;
   font-family: $gil-regular;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .text-white-desk a {
   text-decoration: underline !important;
 }
 .text-darkGray-desk {
   color: $color-gray-dark;
-  font-family: $gil-regular;
+  font-family: $gil-medium;
   text-align: center;
   font-size: 14px;
 }
@@ -197,14 +196,13 @@ a:hover {
 .menu-header {
   display: flex;
   background-color: transparent;
-  display: flex;
   z-index: 99;
-  position: fixed;
   width: 100%;
   // background: rgba(0,0,0,0.8);
   // backdrop-filter: saturate(180%) blur(20px);
+  transition: top 0.3s ease-in-out;
   top: 0;
-  transition: top 0.2s ease-in-out;
+  position: fixed;
 }
 .menu-sandwich {
   display: inline-block;
@@ -366,6 +364,46 @@ a:hover {
 .smart-maca-mob {
   background-color: orange;
 }
+.wrap-menu-smart-mob {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+}
+.wrap-menu-smart-mob svg {
+  width: 45px;
+  padding: 10px;
+  cursor: pointer;
+}
+.wrap-menu-smart-mob button {
+  background: #efefef;
+  border: none;
+}
+.wrap-menu-smart-mob button:focus {
+  outline: none;
+}
+.box-purple-smart-mob {
+  background-color: #6516c5;
+  border: 0px solid #6516c5;
+  border-radius: 10px 40px 10px 40px;
+  position: absolute;
+  bottom: 31px;
+  padding: 30px;
+  overflow: hidden;
+  opacity: 0.7;
+  width: 270px;
+  height: 100px;
+}
+.box-purple-smart-mob p.tit-purple-box {
+  color: $color-white;
+  font-family: $gil-regular;
+  text-align: left;
+  font-size: 1rem;
+  margin-top: -20px;
+}
 
 /* RED MOBILE */
 .btn-buy-red-mob a {
@@ -382,6 +420,7 @@ a:hover {
   padding: 2rem;
   z-index: 2;
   position: relative;
+  top: -100px;
 }
 .btn-green-yellow a img {
   width: 100%;
@@ -399,7 +438,10 @@ a:hover {
   font-size: 2rem;
   color: green;
   text-align: center;
-  padding: 2rem;
+  padding-top: 60px;
+}
+.texts-yellow p.tit-green-desk {
+  margin-bottom: 0;
 }
 .right-3d-mob img {
   width: 100%;
@@ -435,6 +477,7 @@ a:hover {
 .tele-redes {
   display: flex;
   justify-content: flex-end;
+  align-items: baseline;
 }
 .televendas {
   margin-right: 50px;
@@ -446,6 +489,7 @@ a:hover {
 }
 .redes-sociais {
   display: flex;
+  align-items: baseline;
 }
 .redes-sociais p {
   color: white;
@@ -609,8 +653,8 @@ p.text-purple-box span {
 .wrap-menu-smart-desk {
   display: grid;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 200px;
+  left: 10%;
   z-index: 10;
 }
 .btns-smart-desk {
@@ -690,13 +734,73 @@ p.text-purple-box span {
 .smart-drink-desk {
   height: 700px;
 }
-
+.wrap-menu-smart-desk svg {
+  width: 45px;
+  padding: 10px;
+  cursor: pointer;
+}
+.wrap-menu-smart-desk button {
+  background: #efefef;
+  border: none;
+}
+.wrap-menu-smart-desk button:focus {
+  outline: none;
+}
+.selected {
+  fill: $color-pink-dark !important;
+  stroke: $color-pink-dark !important;
+}
+#btn1 {
+  height: 60px;
+  border-radius: 30px 30px 0px 0px;
+}
+#btn1::before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 50px;
+  width: 50%;
+  left: 25%;
+  border-top: 1px solid rgb(165, 165, 165);
+}
+#btn2::before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 50px;
+  width: 50%;
+  left: 25%;
+  border-top: 1px solid rgb(165, 165, 165);
+}
+#btn3::before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 50px;
+  width: 50%;
+  left: 25%;
+  border-top: 1px solid rgb(165, 165, 165);
+}
+#btn4::before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 50px;
+  width: 50%;
+  left: 25%;
+  border-top: 1px solid rgb(165, 165, 165);
+}
+#btn5 {
+  height: 60px;
+  border-radius: 0px 0px 30px 30px;
+}
 
 /* VENDAS 1 E VENDAS 2 DESKTOP */
 .hide,
 .flag,
 .juros,
-.total-parcelado {
+.total-parcelado,
+.descricao-content {
   display: none !important;
 }
 .vendas-desk {
@@ -711,7 +815,7 @@ p.text-purple-box span {
   display: none;
 }
 .shelf-bblend-maquinas ul {
-  max-width: 300px;
+  max-width: 420px;
   margin: 0 auto;
 }
 .por-box {
@@ -719,12 +823,19 @@ p.text-purple-box span {
   border-radius: 10px;
   background-color: white;
   padding: 10px;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 65px;
+  overflow: hidden;
 }
 .botoes {
   border: 0px solid transparent;
   border-radius: 20px 10px 20px 10px;
   background-color: $color-pink-dark;
   padding: 10px;
+  max-width: 280px;
+  margin: 0 auto;
 }
 .btn-buy-enjoy {
   text-align: center;
@@ -735,12 +846,6 @@ p.text-purple-box span {
   font-size: 1rem;
   color: $color-white;
 }
-/*
-.arrow-prev {
-  content: url("/arquivos/arrow-pink-left.png");
-  position: absolute;
-}
-*/
 .slick-slide:focus { 
   outline: none; 
 }
@@ -750,6 +855,110 @@ p.text-purple-box span {
 .slick-list {
   height: auto;
 }
+.links-bottom-vendas-desk {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  border-top: 1px solid lightgray;
+}
+.links-bottom-vendas-desk .comparar-vendas1-desk {
+  text-align: right;
+}
+.links-bottom-vendas-desk .especifica-vendas1-desk {
+  text-align: center;
+}
+.links-bottom-vendas-desk .frete-vendas1-desk {
+  text-align: left;
+}
+.links-bottom-vendas-desk div a {
+  font-family: $gil-bold;
+  text-decoration: underline;
+  color: $color-gray-dark;
+}
+.texts-vendas .tit-purple-desk {
+  color: $color-pink-dark;
+}
+.texts-vendas .text-gray-desk {
+  color: $color-gray-dark;
+  font-family: $gil-medium;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+.texts-vendas .text-gray-desk span {
+  font-family: $gil-bold;
+}
+.nome {
+  color: $color-pink-dark;
+  font-family: $gil-bold;
+  text-align: left;
+  font-size: 16px;
+  padding-left: 70px;
+  padding-top: 60px;
+}
+.descricao {
+  padding-left: 70px;
+}
+.descricao p {
+  color: $color-gray-dark;
+  font-family: $gil-bold;
+  text-align: left;
+  font-size: 14px;
+  padding-bottom: 1rem;
+}
+.saiba-mais-modal {
+  color: $color-pink-dark;
+  font-family: $gil-bold;
+  text-align: left;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+  text-decoration: underline;
+}
+.slick-prev::before {
+  content: "";
+  background: url("/arquivos/arrow-pink-left.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: -210px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.slick-next::before {
+  content: "";
+  background: url("/arquivos/arrow-pink-right.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: -210px;
+  left: -15px;
+  right: 0;
+  bottom: 0;
+}
+.image img {
+  margin: 0 auto;
+}
+.por, 
+.preco-promo {
+  color: $color-pink-dark;
+  font-family: $gil-bold;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: -22px;
+}
+.preco-produto {
+  font-size: 24px;
+  font-family: $gil-bold;
+  color: $color-pink-dark;
+}
+.por-box .col-3 {
+  font-family: $gil-medium;
+  color: $color-pink-dark;
+}
 
 /* PRODUTOS DESKTOP */
 .produtos-desk {
@@ -757,9 +966,11 @@ p.text-purple-box span {
 }
 .tit-prod-desk {
   text-align: center;
+  font-family: $gil-bold;
+  color: #2f2f2f;
 }
 .swiper-container {
-  height: 555px;
+  height: 600px;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -769,17 +980,35 @@ p.text-purple-box span {
   background-size: cover;
   width: 300px;
   height: auto;
-  filter: blur(1.2px);
+  filter: blur(5px);
 }
 .swiper-slide-active {
   filter: blur(0);
 }
 .swiper-pagination {
-  bottom: 55px !important;
+  top: 450px !important;
 }
 .btn-comprar-prod-desk {
   position: relative;
-  top: -30px;
+  top: -85px;
+  z-index: 10;
+  text-align: center;
+}
+.btn-comprar-prod-desk a {
+  font-family: $gil-bold;
+  color: $color-red;
+}
+.btn-comprar-prod-desk a::before {
+  content: url("/arquivos/bd-red-left.png");
+  position: absolute;
+}
+.btn-comprar-prod-desk a::after {
+  content: url("/arquivos/bd-red-right.png");
+  position: absolute;
+}
+.btn-comprar-prod-desk a span {
+  padding-left: 15px;
+  padding-right: 10px;
 }
 .wrapper-box-prod-desk {
   position: relative;
@@ -789,7 +1018,7 @@ p.text-purple-box span {
   top: -230px;
   right: -304px;
   border: 1px solid $color-white;
-  border-radius: 0px 0px 40px 0px;
+  border-radius: 0px 10px 40px 0px;
   z-index: -1;
   box-shadow: -10px 5px 11px -11px rgba(0,0,0,0.49);
 }
@@ -825,8 +1054,10 @@ p.text-purple-box span {
   background: linear-gradient(119.16deg, #FF00C9 0%, #C500FF 100%);
 }
 .wrap-menu-prod-desk {
+  z-index: 9;
   position: relative;
   height: 100px;
+  margin-bottom: -70px;
 }
 .left-btn-prod-desk {
   position: absolute;
@@ -842,29 +1073,76 @@ p.text-purple-box span {
   bottom: 0;
   text-align: center;
 }
-.center-btns-prod-desk svg {
-  width: 58px;
-}
 .right-btn-prod-desk {
   position: absolute;
   top: 0;
+  right: 25px;
+}
+.text-produtos-desk .tit-darkPink-desk {
+  padding: 50px 0 0;
+  font-size: 2.2rem;
+}
+.text-produtos-desk .text-darkGray-desk {
+  font-size: 1.1rem;
+}
+.center-btns-prod-desk svg {
+  width: 48px;
+  padding: 10px;
+  cursor: pointer;
+}
+.center-btns-prod-desk button {
+  background: #efefef;
+  border: none;
+}
+.center-btns-prod-desk button:focus {
+  outline: none;
+}
+#btn-pro1::before {
+  content: "";
+  background: url("/arquivos/btn-left-prod.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 620px;
+  bottom: 0;
+  height: 48px;
+  z-index: -1;
+}
+#btn-pro11::after {
+  content: "";
+  background: url("/arquivos/btn-right-prod.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 645px;
   right: 0;
+  bottom: 0;
+  height: 48px;
+  z-index: -1;
 }
-#Layer_1 {
-  margin-left: 45px;
-}
+
 
 /* RED DESKTOP */
 .red-desk {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 620px;
   background-color: $color-red;
+  z-index: 10;
 }
 .bg-red-desk {
   background-color: $color-red;
 }
-.bg-red-desk::after {
+.bg-red-desk div .tit-purple-desk {
+  padding-top: 75px;
+  z-index: 9;
+}
+.bg-red-desk::before {
   content: "";
   background-image: url("/arquivos/gota-red.png");
   background-position: bottom;
@@ -875,7 +1153,6 @@ p.text-purple-box span {
   left: 0;
   bottom: -24px;
   right: 0;
-  z-index: 1;
 }
 .gif-red-desk {
   text-align: right;
@@ -883,6 +1160,8 @@ p.text-purple-box span {
 }
 .gif-red-desk img {
   width: 100%;
+  max-width: 360px;
+  margin-right: 15px;
 }
 .tit-yellow-red-1,
 .tit-yellow-red-2,
@@ -931,32 +1210,52 @@ p.text-purple-box span {
 .tit-yellow-red p {
   margin-bottom: 0;
 }
+.texts-red {
+  padding-right: 40px;
+}
 .texts-red .text-white-desk {
   text-align: left;
 }
 .btn-purple-red {
   position: relative;
+  z-index: 9;
+  left: -45px;
+  padding-top: 2rem;
 }
+.btn-play-red {
+  text-align: right;
+  margin-right: 60px;
+  padding-top: 64px;
+}
+.btn-play-red a img {
+  width: 100%;
+  max-width: 250px;
+}
+
 
 /* YELLOW DESKTOP */
 .yellow-desk {
   position: relative;
-  height: auto;
+  height: 620px;
   background-color: $color-yellow;
+  z-index: 1;
+}
+.right-3d {
+  text-align: left;
 }
 .right-3d img {
-  width: 80%;
+  width: 100%;
+  max-width: 500px;
 }
 .left-3d img {
   width: 100%;
 }
-.left-3d,
-.right-3d {
-  text-align: center;
+.left-3d {
+  text-align: right;
 }
 .bg-yellow::after {
   content: "";
-  background-image: url(/arquivos/gota-yellow.png);
+  background-image: url("/arquivos/gota-yellow.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: auto;
@@ -965,7 +1264,35 @@ p.text-purple-box span {
   left: 0;
   bottom: -24px;
   right: 0;
-  z-index: 1;
+  z-index: -1;
+}
+.bg-yellow .row {
+  padding-top: 60px;
+}
+.texts-yellow .text-darkGray-desk::after {
+  content: "";
+  background-image: url("/arquivos/selo-natural.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 95px;
+  left: 0;
+  right: 700px;
+  height: 60px;
+}
+.texts-yellow .text-darkGray-desk::before {
+  content: "";
+  background-image: url("/arquivos/selo-sabor.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 90px;
+  left: 600px;
+  bottom: 0;
+  right: 0px;
+  height: 60px;
 }
 
 /* BLUE DESKTOP */
@@ -981,6 +1308,54 @@ p.text-purple-box span {
 .center-blue img {
   width: 300px;
 }
+.btn-comprar-blue-desk {
+  text-align: right;
+  position: relative;
+}
+.btn-comprar-blue-desk a {
+  color: $color-pink-dark;
+  font-family: $gil-medium;
+  text-align: left;
+  font-size: 1rem;
+}
+.btn-comprar-blue-desk a span {
+  padding-left: 15px;
+  padding-right: 10px;
+}
+.btn-comprar-blue-desk a::before {
+  content: url("/arquivos/bd-left-pink.png");
+  position: absolute;
+}
+.btn-comprar-blue-desk a::after {
+  content: url("/arquivos/bd-pink-right.png");
+  position: absolute;
+}
+.texts-blue-desk {
+  padding-top: 90px;
+}
+.left-blue .text-white-desk {
+  font-family: $gil-regular;
+  text-align: right;
+  margin-right: -20px;
+}
+.left-blue .text-white-desk span {
+  font-family: $gil-bold;
+  text-align: right;
+}
+.right-blue .text-white-desk {
+  font-family: $gil-regular;
+  text-align: left;
+  margin-right: 20px;
+  padding-top: 160px;
+}
+.right-blue .text-white-desk span {
+  font-family: $gil-bold;
+  text-align: left;
+}
+.right-blue .btn-comprar-blue-desk {
+  text-align: left;
+}
+
 
 /* DUVIDAS DESKTOP*/
 .duvidas-desk {
@@ -1082,6 +1457,28 @@ button.btn.btn-link {
 
 }
 @media screen and (max-width: 992px) {
+  .text-purple-box {
+    font-size: 12px;
+  }
+  #btn1::before,
+  #btn2::before,
+  #btn3::before,
+  #btn4::before,
+  #btn5::before,
+  #btn-pro1,
+  #btn-pro11 {
+    display: none;
+  }
+  #btn5 {
+    height: auto;
+    width: 60px;
+    border-radius: 0px 30px 30px 0px;
+  }
+  #btn1 {
+    width: 60px;
+    border-radius: 30px 0px 0px 30px;
+    height: auto;
+  }
   .texts-smart-desk .tit-white-desk {
     position: relative;
     top: 190px;
@@ -1181,11 +1578,6 @@ button.btn.btn-link {
 }
 @media screen and (max-width: 1200px) {
   .dest-video-desk {
-    height: auto;
+    height: 550px;
   }
-}
-
-
-.cls-1 {
-  fill: transparent !important;
 }

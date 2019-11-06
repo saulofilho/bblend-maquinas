@@ -1,19 +1,17 @@
 #set($id = $product.Id)
 #set($uri = $product.Uri)
 #set($escapedName = $product.HtmlEscapedName)
-
-
 <article
-    class="enjoy-box $product.CategoryName #if($product.HasBestPrice) withDe #else outDe #end #if($product.NumbersOfInstallment > 1) withAdicional #else outAdicional  #end #if ($product.IsInStock) comEstoque #else semEstoque #end"
+    class="maquinas-box $product.CategoryName #if($product.HasBestPrice) withDe #else outDe #end #if($product.NumbersOfInstallment > 1) withAdicional #else outAdicional  #end #if ($product.IsInStock) comEstoque #else semEstoque #end"
     data-idproduto="$id" data-department="$product.DepartmentName" data-category="$product.CategoryName"
     data-category-link="$product.CategoryLink">
-
     <div class="detalhes">
-        <div title="$escapedName" class="image" data-idproduto="$id">
-            $product.GetImageTag(308,308)
-            $product.ProductField(8)
+        <div class="img-bg-prod">
+            <div title="$escapedName" class="image" data-idproduto="$id">
+                $product.GetImageTag(308,308)
+                $product.ProductField(8)
+            </div>
         </div>
-
         <div class="options">
             #if ($product.IsInStock && $product.DepartmentName == "Bebidas")
             <select>
@@ -21,14 +19,18 @@
             </select>
             #end
         </div>
-
         <a href="$uri" title="$escapedName" class="prod-info">
-
-            <div class="nome">$product.Name</div>
-            <!-- <div class="descricao">$product.DescriptionShort</div> -->
-
+            <div class="nome">
+                $product.Name
+            </div>
+            <div class="descricao">
+                <div>
+                    <p>
+                        Plataforma de bebidas + purificador
+                    </p>
+                </div><a class="saiba-mais-modal" href="#" data-toggle="modal" data-target="#modalSaibaMais">Saiba +</a>
+            </div>
             <div class="shelf-rating avaliacao$product.EvaluationRate"></div>
-
             <div class="FlagsHightLight">
                 #if ($product.IsInStock)
                 $product.DiscountHightLight
@@ -51,25 +53,33 @@
                     #end
                 </p>
                 <div class="txts-preco-promo">
-                    <div class="descricao">
-                        <p>
-                            Plataforma de bebidas + purificador
-                        </p>
-                        <span class="saiba-mais">
-                            <a href="/">
-                                Saiba +
-                            </a>
-                        </span>
-                    </div>
                     <div class="por-box">
                         <p class="por">
-                            <span class="preco-promo">preço promocinal</span>
-                            #if ($product.NumbersOfInstallment > 1)
-                            $product.NumbersOfInstallment<span>x</span> de $product.InstallmentValue <span class="juros">sem
-                                juros</span>
-                            <span class="total-parcelado">Total parcelado:
+                            <div class="preco-promo">
+                                preço promocinal
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    #if ($product.NumbersOfInstallment > 1)
+                                    $product.NumbersOfInstallment
+                                    <span>x</span>
+                                </div>
+                                <div class="col-9">
+                                    <div class="preco-produto">
+                                        $product.InstallmentValue 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="juros">
+                                sem juros
+                            </div>
+                            <div class="total-parcelado">
+                                Total parcelado:
                                 #end
-                                <span class="val">$product.BestPrice</span></span>
+                                <div class="val">
+                                    $product.BestPrice
+                                </div>
+                            </div>
                         </p>
                     </div>
                     <p class="discount-boleto hide">
@@ -89,7 +99,6 @@
             <!-- NEW MODEL PRICE -->
         </a>
     </div>
-
     <div class="botoes">
         #if ($product.DepartmentName == "Bebidas")
         #if ($product.IsInStock)
@@ -107,5 +116,11 @@
         <a href="$uri" title="Reservar" class="btn-eu-quero">Reserve a sua</a>
         #end
         #end
+    </div>
+    <div class="descricao-content">
+        <p>Descrição</p>
+        <div class="descricao-produto">
+            $product.DescriptionShort
+        </div>
     </div>
 </article>

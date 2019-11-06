@@ -1,8 +1,25 @@
 'use strict';
 
+//header efeito
+let prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    document.querySelector('.menu-header').style.top = '0';
+  } else {
+    document.querySelector('.menu-header').style.top = '-50px';
+  }
+  prevScrollPos = currentScrollPos;
+};
+
 //btn sandwich header
 function btnSandwich(x) {
   x.classList.toggle("change");
+};
+
+//accordion button arrow
+function accFunc(x) {
+  x.classList.toggle("arrow-down");
 };
 
 //btns smart container
@@ -19,30 +36,56 @@ $('.btns-prod').click(function() {
     $(target).show();
 });
 
-//slick carousel enjoy
-$('.helperComplement').remove();
+//svg path selected smart
+$('.wrap-menu-smart-desk svg').on("click", function() {
+  $('.wrap-menu-smart-desk svg.selected').attr("class", "");
+  $(this).attr("class", "selected");
+});
+$('.wrap-menu-smart-mob svg').on("click", function() {
+  $('.wrap-menu-smart-mob svg.selected').attr("class", "");
+  $(this).attr("class", "selected");
+});
 
+//svg path selected produtos
+$('.center-btns-prod-desk svg').on("click", function() {
+  $('.center-btns-prod-desk svg.selected').attr("class", "");
+  $(this).attr("class", "selected");
+});
+
+//slick carousel
+$('.helperComplement').remove();
 $(document).ready(function() {
   $('.shelf-bblend-maquinas ul').slick({
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
     infinite: true,
+    mobileFirst: true,
   });  
 });
+$(window).on('orientationchange', function() {
+  $('.shelf-bblend-maquinas ul').slick('resize');
+});
 
-//accordion button arrow
-function accFunc(x) {
-  x.classList.toggle("arrow-down");
-};
+//frete modal
+$('#btn-calcular-cep').on('click', function (e) {
+  e.preventDefault();
+  let items = [{
+    id: 'SKU-DO-PRODUTO',  // sku do item
+    quantity: 1,
+    seller: '1'
+  }];
+  let postalCode = $('#input-cep').val();
+  let country = 'BRA';
+  vtexjs.checkout.simulateShipping(items, postalCode, country)
+    .done(function (result) {
+      console.log(result);
+      $('#resultado-cep').html("Teste: R$" + result.messages);
+    });
+})
 
 
-
-
-
-
-
+  
 //swiper carousel produtos
 let swiperSucoFru = new Swiper('.suco-fruta-cont', {
   observer: true,
