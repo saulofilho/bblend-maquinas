@@ -1,10 +1,56 @@
 'use strict';
 
+// vitrine modal
+$.ajax({
+  url: `/api/catalog_system/pub/products/search/?fq=productClusterIds:206`,
+  type: 'GET',
+  success: function (response) {
+    console.log("Resposta", response[0]['brand']);
+    //$('#nossas-bebidas').html("Teste: R$" + response[0].brand);
+  }
+});
+
+//frete modal
+$('#btn-calcular-cep').on('click', function (e) {
+  e.preventDefault();
+  let items = [{
+    id: 'id',  // sku do item
+    quantity: 1,
+    seller: 'seller'
+  }];
+  let postalCode = $('#input-cep').val();
+  let country = 'BRA';
+  vtexjs.checkout.simulateShipping(items, postalCode, country)
+    .done(function (result) {
+      $('#resultado-cep').html("Teste: R$" + result.logisticsInfo);
+    });
+})
+
+//modal infos
+/*
+let prodModal = {
+  getProd: function(id) {
+    vtexjs.catalog.getProductWithVariations(id).done(function(product){
+      let resultado = product;
+      let source = $("#prod-modal").html();
+      let template = Handlebars.compile(source);
+      let context = resultado;
+      $("#prod-infos").append(html);
+  });
+  }
+}
+$(document).ready(function() {
+  $(".saiba-mais-modal").click(function() {
+    prodModal.getProd($(this).attr("id"));
+    $("#modalSaibaMais").modal()
+  });
+});
+*/
+
 //fade desktop
 $(window).scroll(function(){
   $(".purple-desk").css("opacity", 1 - $(window).scrollTop() / 1250);
 });
-
 
 //header efeito
 let prevScrollPos = window.pageYOffset;
@@ -68,29 +114,12 @@ $(document).ready(function() {
     infinite: true,
   });  
 });
+/*
 $(window).on('resize orientationchange', function() {
   $('.shelf-bblend-maquinas ul').slick('resize');
 });
+*/
 
-//frete modal
-$('#btn-calcular-cep').on('click', function (e) {
-  e.preventDefault();
-  let items = [{
-    id: 'SKU-DO-PRODUTO',  // sku do item
-    quantity: 1,
-    seller: '1'
-  }];
-  let postalCode = $('#input-cep').val();
-  let country = 'BRA';
-  vtexjs.checkout.simulateShipping(items, postalCode, country)
-    .done(function (result) {
-      console.log(result);
-      $('#resultado-cep').html("Teste: R$" + result.messages);
-    });
-})
-
-
-  
 //swiper carousel produtos
 let swiperSucoFru = new Swiper('.suco-fruta-cont', {
   observer: true,

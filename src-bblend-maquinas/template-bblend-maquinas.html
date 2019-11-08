@@ -33,13 +33,13 @@
             </div>
         <!-- whats app button -->
         <!-- modal saiba mais -->
-        <div class="modal-youtube-saibamais">
+        <div class="modal-saibamais">
             <div class="modal fade" id="modalSaibaMais" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <vtex:contentPlaceHolder id="enjoy-carousel" />
+                            <div id="prod-infos"></div>
                         </div>
                     </div>
                 </div>
@@ -141,20 +141,21 @@
             </div>
         <!-- destaque mob -->
         <!-- purple parallax desktop -->
-        <div class="wrapped-purple-para">
-            <div class="container-fluid purple-desk d-lg-block d-none">
-                <div class="para-img-1">
-                    <img src="/arquivos/cap-pessego.png" alt="" />
-                </div>
-                <div class="para-img-2">
-                    <img src="/arquivos/cap-uva.png" alt="" />
-                </div>
-                <div class="para-img-3">
-                    <img src="/arquivos/cap-mix-frutas.png" alt="" />
-                </div>
-                <div class="para-img-4">
-                    <img src="/arquivos/cap-guarana.png" alt="" />
-                </div>
+        <div class="wrapped-purple-para d-lg-block d-none">
+            <div class="container-fluid purple-desk"></div>
+        </div>
+        <div class="container-fluid caps-purple d-lg-block d-none">
+            <div class="para-img-1">
+                <img src="/arquivos/cap-pessego.png" alt="" />
+            </div>
+            <div class="para-img-2">
+                <img src="/arquivos/cap-uva.png" alt="" />
+            </div>
+            <div class="para-img-3">
+                <img src="/arquivos/cap-mix-frutas.png" alt="" />
+            </div>
+            <div class="para-img-4">
+                <img src="/arquivos/cap-guarana.png" alt="" />
             </div>
         </div>
         <!-- purple parallax desktop -->
@@ -958,7 +959,9 @@
                                                     <input type="frete" class="form-control" id="input-cep" placeholder="" />
                                                 </div>
                                                 <button type="submit" class="btn btn-primary" id="btn-calcular-cep">Calcular</button>
-                                                <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank">Não sei meu CEP</a>
+                                                <div class="nao-sei-cep">
+                                                    <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank">Não sei meu CEP</a>
+                                                </div>
                                             </form>
                                             <div class="txt-resul-cep">
                                                 <p id="resultado-cep"></p>

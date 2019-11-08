@@ -1,6 +1,7 @@
 #set($id = $product.Id)
 #set($uri = $product.Uri)
 #set($escapedName = $product.HtmlEscapedName)
+
 <article
     class="maquinas-box $product.CategoryName #if($product.HasBestPrice) withDe #else outDe #end #if($product.NumbersOfInstallment > 1) withAdicional #else outAdicional  #end #if ($product.IsInStock) comEstoque #else semEstoque #end"
     data-idproduto="$id" data-department="$product.DepartmentName" data-category="$product.CategoryName"
@@ -26,9 +27,10 @@
             <div class="descricao">
                 <div>
                     <p>
-                        Plataforma de bebidas + purificador
+                        Plataforma de bebidas + purificador.
+                        <a id="$id" class="saiba-mais-modal" href="#" data-toggle="modal" data-target="#modalSaibaMais">Saiba +</a>
                     </p>
-                </div><a class="saiba-mais-modal" href="#" data-toggle="modal" data-target="#modalSaibaMais">Saiba +</a>
+                </div>
             </div>
             <div class="shelf-rating avaliacao$product.EvaluationRate"></div>
             <div class="FlagsHightLight">
@@ -44,33 +46,44 @@
 
             <!-- NEW MODEL PRICE -->
             #if ($product.IsInStock)
-            <div class="price">
-                <p class="de">
-                    #if ($product.HasBestPrice)
-                    <span class="txtDe">De: </span>
-                    <span class="val">$product.ListPrice</span>
-                    <span class="txtPor">Por</span>
-                    #end
-                </p>
-                <div class="txts-preco-promo">
-                    <div class="por-box">
-                        <p class="por">
+            <div class="price container-fluid">
+                <div class="row">
+                    <div class="col-6 border-right">
+                        <div class="preco-original">
+                            <div class="de">
+                                #if ($product.HasBestPrice)
+                                <p class="txtDe">
+                                    preço original
+                                </p>
+                                <p class="val">
+                                    $product.ListPrice
+                                </p>
+                                #end
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="por-box">
                             <div class="preco-promo">
-                                preço promocinal
+                                <p>
+                                    preço promocinal
+                                </p>
                             </div>
                             <div class="row">
-                                <div class="col-3">
-                                    #if ($product.NumbersOfInstallment > 1)
-                                    $product.NumbersOfInstallment
-                                    <span>x</span>
+                                <div class="dez-vezes">
+                                    <p>
+                                        #if ($product.NumbersOfInstallment > 1)
+                                        $product.NumbersOfInstallment
+                                        x
+                                    </p>
                                 </div>
-                                <div class="col-9">
-                                    <div class="preco-produto">
+                                <div class="preco-produto">
+                                    <p>
                                         $product.InstallmentValue 
-                                    </div>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="juros">
+                            <!-- <div class="juros">
                                 sem juros
                             </div>
                             <div class="total-parcelado">
@@ -79,15 +92,15 @@
                                 <div class="val">
                                     $product.BestPrice
                                 </div>
-                            </div>
+                            </div> -->
+                        </div>
+                        <!-- <p class="discount-boleto hide">
+                            à vista no boleto: $product.BestPrice
                         </p>
+                        <p class="discount-cartao hide">
+                            à vista no cartão: $product.BestPrice
+                        </p> -->
                     </div>
-                    <p class="discount-boleto hide">
-                        à vista no boleto: $product.BestPrice
-                    </p>
-                    <p class="discount-cartao hide">
-                        à vista no cartão: $product.BestPrice
-                    </p>
                 </div>
             </div>
             #else

@@ -5,6 +5,14 @@ $.ajax({
   }
 });
 
+
+
+
+vtexjs.catalog.getProductWithVariations(29).done(function(product){
+  console.log(product);
+});
+
+
 //frete modal
 $('#btn-calcular-cep').on('click', function (e) {
   e.preventDefault();
@@ -36,3 +44,5 @@ $('#btn-calcular-cep').on('click', function (e) {
       $('#resultado-cep').html("Teste: R$" + result);
     });
 })
+
+

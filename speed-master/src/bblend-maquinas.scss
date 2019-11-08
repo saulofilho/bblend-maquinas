@@ -193,29 +193,113 @@ a:hover {
   z-index: 999;
 }
 
+/* MODAL */
+.frete-vendas1-desk h2.modal-title {
+  font-family: $gil-bold;
+  font-size: 22px;
+  text-align: center;
+}
+#btn-calcular-cep {
+  width: 100%;
+  background-color: $color-pink-dark;
+  color: $color-white;
+  text-align: center;
+  font-family: $gil-bold;
+  border-color: transparent;
+}
+.form-group {
+  text-align: center;
+  font-family: $gil-bold;
+}
+.form-control {
+  background-color: $color-gray-bg-vendas !important;
+}
+.modal-header {
+  margin: 0 auto;
+  border-bottom: transparent !important;
+  margin-bottom: -15px;
+}
+.nao-sei-cep{
+  text-align: center;
+  padding-top: 20px;
+}
+th {
+  background-color: $color-gray-bg-vendas;
+}
+.gray-compara {
+  background-color: $color-gray-bg-vendas;
+  padding: 1.5rem;
+  font-family: $gil-bold;
+  font-size: 14px;
+  line-height: 1;
+  text-align: right;
+}
+.text-comparacao {
+  text-align: center;
+  padding: 1rem;
+  font-family: $gil-bold;
+  font-size: 22px;
+}
+.svgs-compara {
+  text-align: center;
+  border-right: 1px solid $color-gray-bg-vendas;
+}
+.txt-dados-compara {
+  text-align: center;
+  padding: 1.5rem;
+  font-family: $gil-medium;
+  font-size: 14px;
+  border-right: 1px solid $color-gray-bg-vendas;
+}
+.txt-pink-compara {
+  font-family: $gil-bold;
+  font-size: 16px;
+  color: #b81455;
+  line-height: 1;
+  padding-top: 1rem;
+}
+.txt-gray-compara {
+  font-family: $gil-medium;
+  font-size: 12px;
+  color: $color-gray-light;
+  line-height: 1;
+}
+.tb-tr-1 th {
+  border-right: 1px solid $color-white;
+  border-bottom: 1px solid $color-white;
+}
+.txt-gray-dados {
+  font-family: $gil-regular;
+  font-size: 12px;
+  color: $color-gray-light;
+  line-height: 1;
+}
+.comparar-vendas1-desk .modal-body {
+  padding: 0 !important;
+}
+
 /* HEADER */
 .menu-header {
   display: flex;
   background-color: transparent;
   z-index: 99;
   width: 100%;
-  // background: rgba(0,0,0,0.8);
-  // backdrop-filter: saturate(180%) blur(20px);
   transition: top 0.3s ease-in-out;
   top: 0;
   position: fixed;
+  align-items: center;
 }
 .menu-sandwich {
   display: inline-block;
   cursor: pointer;
-  margin-top: 18px;
-  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .bar1,
 .bar2,
 .bar3 {
-  width: 30px;
-  height: 3px;
+  width: 35px;
+  height: 5px;
   background-color: $color-white;
   margin: 6px 0;
   transition: 0.4s;
@@ -224,15 +308,15 @@ a:hover {
   margin-left: 10px;
 }
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-1px, -16px);
-  transform: rotate(-45deg) translate(-1px, 16px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 .change .bar2 {
   opacity: 0;
 }
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(3px, -12px);
-  transform: rotate(45deg) translate(3px, -12px);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 .itens-right {
   margin-left: auto;
@@ -269,9 +353,8 @@ a:hover {
   padding: 0 !important;
   justify-content: flex-end !important;
 }
-.logo {
-  margin-top: 23px;
-  margin-left: 20px;
+.logo-bblend-white img {
+  width: 100%;
 }
 
 
@@ -570,7 +653,6 @@ a:hover {
   position: fixed;
   left: 0;
   right: 0;
-  z-index: -1;
 }
 .bg-video {
   position: absolute;
@@ -596,15 +678,26 @@ a:hover {
 /* PURPLE PARALLAX DESKTOP */
 .wrapped-purple-para {
   background: $color-white;
+  position: relative;
+  height: 600px;
+  background-color: $color-white;
 }
 .purple-desk {
   position: relative;
-  height: 600px;
+  height: 600px; 
   background-color: $color-purple;
+}
+.caps-purple {
+  position: absolute;
+  top: 700px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 .para-img-1 {
   position: absolute;
-  top: 0;
+  top: -70px;
   right: 0;
   bottom: 0;
   left: 500px;
@@ -614,16 +707,20 @@ a:hover {
   right: 0;
   bottom: 40px;
   left: 0;
+  top: 80px;
 }
 .para-img-3 {
   position: absolute;
   right: 0;
   bottom: -70px;
+  bottom: 0;
+  top: 180px;
 }
 .para-img-4 {
   position: absolute;
   right: 0;
-  bottom: -55px;
+  top: 380px;
+  bottom: 0;
   left: 300px;
 }
 .para-img-1 img {
@@ -878,7 +975,7 @@ p.text-purple-box span {
   border-radius: 0px 0px 30px 30px;
 }
 
-/* VENDAS 1 E VENDAS 2 DESKTOP */
+/* VENDAS DESKTOP */
 .hide,
 .flag,
 .juros,
@@ -888,6 +985,7 @@ p.text-purple-box span {
 }
 .vendas-desk {
   height: auto;
+  position: relative;
   background-color: $color-gray-bg-vendas;
 }
 .shelf-bblend-maquinas {
@@ -900,20 +998,9 @@ p.text-purple-box span {
   max-width: 420px;
   margin: 0 auto;
 }
-.por-box {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background-color: white;
-  padding: 10px;
-  max-width: 280px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  height: 65px;
-  overflow: hidden;
-}
 .botoes {
   border: 0px solid transparent;
-  border-radius: 20px 10px 20px 10px;
+  border-radius: 30px 10px 30px 10px;
   background-color: $color-pink-dark;
   padding: 10px;
   max-width: 280px;
@@ -936,6 +1023,10 @@ p.text-purple-box span {
 }
 .slick-list {
   height: auto;
+  z-index: 1;
+}
+.slick-dots {
+  top: 320px;
 }
 .links-bottom-vendas-desk {
   margin-top: 30px;
@@ -1023,27 +1114,72 @@ p.text-purple-box span {
 .image img {
   margin: 0 auto;
 }
-.por, 
-.preco-promo {
-  color: $color-pink-dark;
-  font-family: $gil-bold;
-  text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin-top: -22px;
-}
 .preco-produto {
   font-size: 24px;
   font-family: $gil-bold;
   color: $color-pink-dark;
+  position: relative;
+  top: -20px;
+  right: -12px;
 }
 .por-box .col-3 {
   font-family: $gil-medium;
   color: $color-pink-dark;
 }
+.price {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 65px;
+  overflow: hidden;
+}
+.preco-original {
+  font-family: $gil-medium;
+  color: $color-gray-light;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 0;
+  padding-top: 15px;
+  overflow: hidden;
+}
+.preco-promo {
+  font-family: $gil-bold;
+  color: $color-pink-dark;
+  text-transform: uppercase;
+  font-size: 10px;
+  position: relative;
+  top: -4px;
+}
+.por-box {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 65px;
+}
+.prod-info {
+  font-family: $gil-bold;
+  color: $color-gray-dark;
+  font-size: 14px;
+}
+.dez-vezes {
+  font-family: $gil-medium;
+  color: $color-pink-dark;
+  font-size: 12px;
+  position: relative;
+  top: -15px;
+  right: -10px;
+}
 
 /* PRODUTOS DESKTOP */
 .produtos-desk {
+  position: relative;
   height: auto;
   background: $color-white;
 }
@@ -1061,7 +1197,7 @@ p.text-purple-box span {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
+  width: 100%;
   height: auto;
   filter: blur(5px);
 }
@@ -1119,7 +1255,6 @@ p.text-purple-box span {
 .nectares-cont,
 .frapes-cont {
   background: linear-gradient(119.16deg, #00FF00 0%, #FFDC1A 100%);
-  text-align: center;
 }
 .refri-cont,
 .chas-gelados-cont,
@@ -1197,6 +1332,23 @@ p.text-purple-box span {
   bottom: 0;
   height: 48px;
   z-index: -1;
+}
+#btn-pro1::after,
+#btn-pro2::after,
+#btn-pro3::after,
+#btn-pro4::after,
+#btn-pro5::after,
+#btn-pro6::after,
+#btn-pro7::after,
+#btn-pro8::after,
+#btn-pro9::after,
+#btn-pro10::after
+ {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #a5a5a5;
 }
 #btn-pro11::after {
   content: "";
@@ -1314,6 +1466,8 @@ p.text-purple-box span {
   text-align: right;
   margin-right: 60px;
   padding-top: 80px;
+  position: relative;
+  z-index: 9;
 }
 .btn-play-red a img {
   width: 100%;
@@ -1454,6 +1608,7 @@ p.text-purple-box span {
   background-color: $color-white;
   padding-top: 120px;
   padding-bottom: 60px;
+  position: relative;
 }
 .card-header {
   padding: 0 !important;
@@ -1585,6 +1740,10 @@ button.btn.btn-link {
   }
 }
 @media screen and (max-width: 992px) {
+  .swiper-wrapper {
+    position: relative;
+    left: -115px;
+  }
   .btn-green-yellow {
     text-align: center;
     position: relative;
@@ -1653,7 +1812,7 @@ button.btn.btn-link {
     right: 0;
     left: 0;
     bottom: 0;
-    margin-left: 40%;
+    margin-left: 45%;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -1682,8 +1841,37 @@ button.btn.btn-link {
     border-radius: 30px 0px 0px 30px;
     height: auto;
   }
+  #btn1::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #a5a5a5;
+  }
+  #btn2::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #a5a5a5;
+  }
+  #btn3::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #a5a5a5;
+  }
+  #btn4::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #a5a5a5;
+  }
   .swiper-container {
     height: 800px;
+    width: 100%;
   }
   .swiper-pagination {
     top: 625px !important;
@@ -1749,6 +1937,7 @@ button.btn.btn-link {
   }
   .gif-red-desk {
     margin-right: 0;
+    text-align: center;
   }
   .wrapper-box-prod-desk {
     width: 240px;
