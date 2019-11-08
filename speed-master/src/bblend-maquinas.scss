@@ -111,6 +111,9 @@ li {
 a:hover {
   color: $color-yellow !important;
 }
+a span:hover {
+  color: $color-yellow !important;
+}
 .txt-yellow-desk {
   color: $color-yellow;
   font-family: $gil-regular;
@@ -257,12 +260,14 @@ th {
   color: #b81455;
   line-height: 1;
   padding-top: 1rem;
+  text-align: center;
 }
 .txt-gray-compara {
   font-family: $gil-medium;
   font-size: 12px;
   color: $color-gray-light;
   line-height: 1;
+  text-align: center;
 }
 .tb-tr-1 th {
   border-right: 1px solid $color-white;
@@ -429,6 +434,7 @@ th {
 }
 .dest-mob {
   background-color: $color-pink-dark;
+  height: 450px;
 }
 .btn-white-pink-mob {
   text-align: center;
@@ -502,13 +508,15 @@ th {
 .btn-buy-red-mob {
   position: relative;
   z-index: 9;
+  justify-content: center;
+  padding-top: 30px;
 }
-.btn-buy-red-mob a {
-  margin: 0 auto;
-}
-.btn-buy-red-mob a img {
-  width: 100%;
-  padding: 2rem;
+.btn-quero-minha-purple {
+  border: 0px solid transparent;
+  border-radius: 30px 10px 30px 10px;
+  background-color: $color-purple;
+  padding: 10px;
+  width: 280px;
 }
 
 /* YELLOW MOBILE */
@@ -569,7 +577,7 @@ th {
 }
 .right-blue-mob .texts-top-blue .text-white-desk {
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
 }
 .right-blue-mob .texts-top-blue .text-white-desk span {
   font-family: $gil-bold;
@@ -584,7 +592,7 @@ th {
 }
 .texts-bottom-blue .text-white-desk {
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
 }
 .texts-bottom-blue .text-white-desk span {
   font-family: $gil-bold;
@@ -647,7 +655,6 @@ th {
   position: relative;
   height: 640px;
 }
-
 .dest-video-desk .container {
   padding-bottom: 40px;
   position: fixed;
@@ -673,6 +680,29 @@ th {
 .btns-dest-desk {
   justify-content: center;
   margin: 2rem;
+}
+.yt-destaque {
+  background: rgba(49, 45, 45, 0.9);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  justify-content: center;
+  display: none;
+}
+.yt-destaque iframe {
+  position:absolute;
+  left: 0; 
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  margin: auto;
 }
 
 /* PURPLE PARALLAX DESKTOP */
@@ -1027,6 +1057,13 @@ p.text-purple-box span {
 }
 .slick-dots {
   top: 320px;
+}
+.slick-dots li.slick-active button:before {
+  color:$color-pink-dark !important;
+  font-size: 14px;
+}
+.slick-dots li button:before {
+  color: $color-gray-light;
 }
 .links-bottom-vendas-desk {
   margin-top: 30px;
@@ -1459,8 +1496,20 @@ p.text-purple-box span {
 .btn-purple-red {
   position: relative;
   z-index: 9;
-  left: -45px;
-  padding-top: 2rem;
+  left: 0;
+  top: 10px;
+}
+.btn-quero-minha-purple {
+  border: 0px solid transparent;
+  border-radius: 30px 10px 30px 10px;
+  background-color: $color-purple;
+  padding: 15px;
+  width: 280px;
+  text-align: center;
+}
+.btn-quero-minha-purple a span {
+  font-family: $gil-bold;
+  color: $color-white;
 }
 .btn-play-red {
   text-align: right;
@@ -1472,6 +1521,29 @@ p.text-purple-box span {
 .btn-play-red a img {
   width: 100%;
   max-width: 250px;
+}
+.yt-red {
+  background: rgba(49, 45, 45, 0.9);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  justify-content: center;
+  display: none;
+}
+.yt-red iframe {
+  position:absolute;
+  left:0; 
+  right:0;
+  top:0; 
+  bottom:0;
+  margin:auto;
 }
 
 
@@ -1578,9 +1650,9 @@ p.text-purple-box span {
 .left-blue .text-white-desk {
   font-family: $gil-regular;
   text-align: right;
-  margin-right: -20px;
+  margin-right: -10px;
   padding-top: 160px;
-  padding-left: 120px;
+  padding-left: 100px;
 }
 .left-blue .text-white-desk span {
   font-family: $gil-bold;
@@ -1589,7 +1661,7 @@ p.text-purple-box span {
 .right-blue .text-white-desk {
   font-family: $gil-regular;
   text-align: left;
-  padding-right: 120px;
+  padding-right: 90px;
   padding-top: 160px;
 }
 .right-blue .text-white-desk span {
@@ -1664,6 +1736,22 @@ button.btn.btn-link {
 .arrow-down::after {
   content: "\f077";
 }
+.btn-quero-minha {
+  margin-left: 30px;
+}
+.btn-quero-minha-white {
+  border: 0px solid transparent;
+  border-radius: 30px 10px 30px 10px;
+  background-color: $color-white;
+  padding: 15px;
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn-quero-minha-white a span {
+  font-family: $gil-bold;
+  color: $color-pink-dark;
+}
 
 /* FOOTER DESKTOP */
 .footer-style-mob {
@@ -1705,6 +1793,9 @@ button.btn.btn-link {
 
 /* MEDIA QUERY */
 @media screen and (max-width: 640px) {
+  .tit-yellow-red-2::before {
+    top: -180px;
+  }
   .btn-left,
   .btn-center,
   .btn-right {
@@ -1723,10 +1814,18 @@ button.btn.btn-link {
   }
 }
 @media screen and (max-width: 768px) {
+  .tit-yellow-red-3::before {
+    top: 80px;
+  }
+  .tit-yellow-red-2::before {
+    top: -165px;
+  }
   .texts-bottom-blue {
     padding-top: 40px;
   }
   .right-blue-mob {
+    position: relative;
+    left: -25px;
     padding-top: 60px;
   }
   .blue-desk {
@@ -1740,6 +1839,10 @@ button.btn.btn-link {
   }
 }
 @media screen and (max-width: 992px) {
+  .btn-quero-minha {
+    margin: 0 auto;
+    padding-top: 30px;
+  }
   .swiper-wrapper {
     position: relative;
     left: -115px;

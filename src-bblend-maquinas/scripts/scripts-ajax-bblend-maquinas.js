@@ -6,8 +6,6 @@ $.ajax({
 });
 
 
-
-
 vtexjs.catalog.getProductWithVariations(29).done(function(product){
   console.log(product);
 });

@@ -32,20 +32,6 @@
                 </a>
             </div>
         <!-- whats app button -->
-        <!-- modal saiba mais -->
-        <div class="modal-saibamais">
-            <div class="modal fade" id="modalSaibaMais" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div id="prod-infos"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- modal saiba mais -->
         <!-- destaque desktop -->
             <div class="container-fluid dest-video-desk d-lg-block d-none">
                 <div class="bg-video">
@@ -84,14 +70,16 @@
                     </div>
                     <div class="row btns-dest-desk">
                         <div class="btn-play-white">
-                            <a href="https://www.youtube.com/watch?v=0PkugxJiJ94" target="_blank">
+                            <a href="#">
                                 <img src="/arquivos/btn-play-white.png" alt="btn-play-white" />
                             </a>
                         </div>
-                        <div class="btn-white-pink d-lg-block d-none">
-                            <a href="https://loja.bblend.com.br/landing/maquinas-bblend">
-                                <img src="/arquivos/btn-white-pink.png" alt="" />
-                            </a>
+                        <div class="btn-quero-minha d-lg-flex d-none">
+                            <div class="btn-quero-minha-white">
+                                <a href="http://bblend.vtexlocal.com.br/un-plug-white/p" title="Adicionar" tabindex="0">
+                                    <span>Eu quero minha B.blend</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,10 +119,12 @@
                                 <img src="/arquivos/selo-qualidade-white.png" alt="selo qualidade mob" />
                             </a>
                         </div>
-                        <div class="btn-white-pink-mob">
-                            <a href="/">
-                                <img src="/arquivos/btn-white-pink-mob.png" alt="" />
-                            </a>
+                        <div class="btn-quero-minha d-lg-none d-flex">
+                            <div class="btn-quero-minha-white">
+                                <a href="http://bblend.vtexlocal.com.br/un-plug-white/p" title="Adicionar" tabindex="0">
+                                    <span>Eu quero minha B.blend</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -691,15 +681,11 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 enjoy-vendas">
                             <section class="vitrine-enjoy-desk">
-                                <div class="arrow-prev arrow-prev-enjoy"></div>
-                                <div class="arrow-next arrow-next-enjoy"></div>
                                 <vtex:contentPlaceHolder id="enjoy-carousel" />
                             </section>
                         </div>
                         <div class="col-12 col-lg-6 unplug-vendas">
                             <section class="vitrine-unplug-desk">
-                                <div class="arrow-prev arrow-prev-unplug"></div>
-                                <div class="arrow-next arrow-next-unplug"></div>
                                 <vtex:contentPlaceHolder id="unplug-carousel" />
                             </section>
                         </div>
@@ -987,9 +973,6 @@
                 </div>
                 <div class="btn-prod">
                     <div class="wrap-menu-prod-desk">
-                        <!-- <div class="left-btn-prod-desk d-lg-flex d-none">
-                            <img src="/arquivos/sabores-pink.png" alt="" />
-                        </div> -->
                         <div class="center-btns-prod-desk dragscroll">
                             <button type="button" id="btn-pro1" data-target="suco-fruta" class="btns-prod suco-fruta-svg-desk">
                                 <span>
@@ -1116,9 +1099,6 @@
                                 </span>
                             </button>
                         </div>
-                        <!-- <div class="right-btn-prod-desk d-lg-flex d-none">
-                            <img src="/arquivos/preco-pink.png" alt="" />
-                        </div> -->
                     </div>
                 </div>
                 <div class="wrap-carou-prod-desk" id="content-produtos">
@@ -1975,7 +1955,7 @@
                                     <img src="https://bblend-maquinas.s3-sa-east-1.amazonaws.com/gif-maq-desk.gif" alt="" />
                                 </div>
                                 <div class="btn-play-red">
-                                    <a href="https://www.youtube.com/watch?v=hPonMCQgOBQ" target="_blank">
+                                    <a href="#">
                                         <img src="/arquivos/btn-play-white.png" alt="btn-play-white" />
                                     </a>
                                 </div>
@@ -2009,14 +1989,18 @@
                                     </p>
                                 </div>
                                 <div class="btn-purple-red d-none d-lg-flex">
-                                    <a href="https://loja.bblend.com.br/landing/maquinas-bblend" target="_blank">
-                                        <img src="/arquivos/btn-purple.png" alt="" />
-                                    </a>
+                                    <div class="btn-quero-minha-purple">
+                                        <a href="http://bblend.vtexlocal.com.br/un-plug-white/p" title="Adicionar" tabindex="0">
+                                            <span>Eu quero minha B.blend</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="btn-buy-red-mob d-lg-none d-flex">
-                                    <a href="https://loja.bblend.com.br/landing/maquinas-bblend" target="_blank">
-                                        <img src="/arquivos/btn-purple-mob.png" alt="" />
-                                    </a>
+                                    <div class="btn-quero-minha-purple">
+                                        <a href="http://bblend.vtexlocal.com.br/un-plug-white/p" title="Adicionar" tabindex="0">
+                                            <span>Eu quero minha B.blend</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2197,7 +2181,6 @@
                                 </button>
                             </h2>
                         </div>
-
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 1. Faça o login ou cadastre-se (botão localizado no canto superior direito direito)
@@ -2392,6 +2375,16 @@
             </div>
         <!-- duvidas-->
         </section>
+        <!-- youtube modal-->
+        <div class="yt-destaque">
+            <span class="vid-x">
+            </span>
+        </div>
+        <div class="yt-red">
+            <span class="vid-x2">
+            </span>
+        </div>
+        <!-- youtube modal-->
     </main>
     <!-- MAIN -->
     <!-- FOOTER -->

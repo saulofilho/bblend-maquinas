@@ -3,8 +3,10 @@
 #set($escapedName = $product.HtmlEscapedName)
 
 <article
-    class="maquinas-box $product.CategoryName #if($product.HasBestPrice) withDe #else outDe #end #if($product.NumbersOfInstallment > 1) withAdicional #else outAdicional  #end #if ($product.IsInStock) comEstoque #else semEstoque #end"
-    data-idproduto="$id" data-department="$product.DepartmentName" data-category="$product.CategoryName"
+    class="maquinas-box $product.CategoryName #if($product.HasBestPrice) withDe #else outDe #end #if($product.NumbersOfInstallment > 1) withAdicional #else outAdicional #end #if ($product.IsInStock) comEstoque #else semEstoque #end"
+    data-idproduto="$id" 
+    data-department="$product.DepartmentName" 
+    data-category="$product.CategoryName"
     data-category-link="$product.CategoryLink">
     <div class="detalhes">
         <div class="img-bg-prod">
@@ -28,7 +30,14 @@
                 <div>
                     <p>
                         Plataforma de bebidas + purificador.
-                        <a id="$id" class="saiba-mais-modal" href="#" data-toggle="modal" data-target="#modalSaibaMais">Saiba +</a>
+                        <a 
+                            id="saibaMais" 
+                            class="saiba-mais-modal" 
+                            href="#" 
+                            data-toggle="modal" 
+                            data-target="#modalSaibaMais">
+                            Saiba +
+                        </a>
                     </p>
                 </div>
             </div>
@@ -137,3 +146,17 @@
         </div>
     </div>
 </article>
+<!-- modal saiba mais -->
+<div class="modal-saibamais">
+    <div class="modal fade" id="modalSaibaMais" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <vtex:contentPlaceHolder id="enjoy-carousel" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal saiba mais -->

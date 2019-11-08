@@ -1,28 +1,70 @@
 'use strict';
 
-// vitrine modal
-$.ajax({
-  url: `/api/catalog_system/pub/products/search/?fq=productClusterIds:206`,
-  type: 'GET',
-  success: function (response) {
-    console.log("Resposta", response[0]['brand']);
-    //$('#nossas-bebidas').html("Teste: R$" + response[0].brand);
-  }
+function playVideo(){
+  $('.btn-play-white').on('click', function(){
+    $(".yt-destaque").css("display", "block");
+    $('.yt-destaque').append(' <iframe width="560" height="315"\
+      src="https://www.youtube.com/embed/0PkugxJiJ94?autoplay=1&amp;loop=1" frameborder="0"\
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"\
+      allowfullscreen=""></iframe><span class="vid-x"><img class="close-video-x" data-dismiss="modal"\
+          src="data:image/gif;base64,R0lGODlhRABEAIABAP///////yH5BAEAAAEALAAAAABEAEQAAAKVjI+py+0Po5y02oszBPxyoGFfR41gWJlnpKJWu5muJzvw/NbLjefjruvRfgiecPg5GI/IzpLZfEKjyelMtbKisFoXltQVfcHhkkxaZtzQ6WIwwG4/42E03Rq/M+/6Xr9/RTTxVkc2aNiWqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGyvbUwAAOw==" /></span>')
+  })
+}
+function closeVideo() {
+  $(document).on('click', '.vid-x .close-video-x', function(){
+    $(".yt-destaque").css("display", "none");
+    $('.yt-destaque iframe, .close-video-x').remove()
+  })
+}
+function playVideo2(){
+  $('.btn-play-red').on('click', function(){
+    $(".yt-red").css("display", "block");
+    $('.yt-red').append(' <iframe width="560" height="315"\
+      src="https://www.youtube.com/embed/hPonMCQgOBQ?autoplay=1&amp;loop=1" frameborder="0"\
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"\
+      allowfullscreen=""></iframe><span class="vid-x2"><img class="close-video-x" data-dismiss="modal"\
+          src="data:image/gif;base64,R0lGODlhRABEAIABAP///////yH5BAEAAAEALAAAAABEAEQAAAKVjI+py+0Po5y02oszBPxyoGFfR41gWJlnpKJWu5muJzvw/NbLjefjruvRfgiecPg5GI/IzpLZfEKjyelMtbKisFoXltQVfcHhkkxaZtzQ6WIwwG4/42E03Rq/M+/6Xr9/RTTxVkc2aNiWqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGyvbUwAAOw==" /></span>')
+  })
+}
+function closeVideo2() {
+  $(document).on('click', '.vid-x2 .close-video-x', function(){
+    $(".yt-red").css("display", "none");
+    $('.yt-red iframe, .close-video-x').remove()
+  })
+}
+$(document).ready(function () {
+  playVideo();
+  closeVideo();
+  playVideo2();
+  closeVideo2();
 });
+
+// vitrine modal
+let vitrineModal = {
+  getColecao: $.ajax({
+    url: `/api/catalog_system/pub/products/search/?fq=productClusterIds:206`,
+    type: 'GET',
+    success: function (response) {
+      console.log("Resposta", response[0]['brand']);
+      //$('#nossas-bebidas').html("Teste: R$" + response[0].brand);
+    }
+  })
+}
 
 //frete modal
 $('#btn-calcular-cep').on('click', function (e) {
   e.preventDefault();
   let items = [{
-    id: 'id',  // sku do item
+    id: 33,
     quantity: 1,
-    seller: 'seller'
+    seller: '1'
   }];
   let postalCode = $('#input-cep').val();
   let country = 'BRA';
   vtexjs.checkout.simulateShipping(items, postalCode, country)
     .done(function (result) {
-      $('#resultado-cep').html("Teste: R$" + result.logisticsInfo);
+      console.log("Teste", result.logisticsInfo[0].slas[0])
+      $('#resultado-cep').html("Teste: R$" + result.logisticsInfo[0].slas);
     });
 })
 
