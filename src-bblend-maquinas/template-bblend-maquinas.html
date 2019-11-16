@@ -83,6 +83,11 @@
                         </div>
                     </div>
                 </div>
+                <a href="#purple-div">
+                    <div class="pingo">
+                        <img src="/arquivos/ponta-gota.png" alt="" />
+                    </div>
+                </a>
             </div>
         <!-- destaque desktop -->
         <!-- destaque mob -->
@@ -132,20 +137,21 @@
         <!-- destaque mob -->
         <!-- purple parallax desktop -->
         <div class="wrapped-purple-para d-lg-block d-none">
-            <div class="container-fluid purple-desk"></div>
-        </div>
-        <div class="container-fluid caps-purple d-lg-block d-none">
-            <div class="para-img-1">
-                <img src="/arquivos/cap-pessego.png" alt="" />
-            </div>
-            <div class="para-img-2">
-                <img src="/arquivos/cap-uva.png" alt="" />
-            </div>
-            <div class="para-img-3">
-                <img src="/arquivos/cap-mix-frutas.png" alt="" />
-            </div>
-            <div class="para-img-4">
-                <img src="/arquivos/cap-guarana.png" alt="" />
+            <div class="container-fluid purple-desk">
+                <div class="container-fluid caps-purple d-lg-block d-none">
+                    <div class="para-img-1">
+                        <img src="/arquivos/cap-pessego.png" alt="" />
+                    </div>
+                    <div class="para-img-2">
+                        <img src="/arquivos/cap-uva.png" alt="" />
+                    </div>
+                    <div class="para-img-3">
+                        <img src="/arquivos/cap-mix-frutas.png" alt="" />
+                    </div>
+                    <div class="para-img-4">
+                        <img src="/arquivos/cap-guarana.png" alt="" />
+                    </div>
+                </div>
             </div>
         </div>
         <!-- purple parallax desktop -->
@@ -154,7 +160,7 @@
                 <div class="btns-smart-desk">
                     <div class="d-lg-flex d-none">
                         <div class="wrap-menu-smart-desk">
-                            <button type="button" id="btn1" data-target="maca" class="btns maca-svg-desk">
+                            <button type="button" id="btn1" data-target="maca" class="btns maca-svg-desk" data-toggle="tooltip" data-placement="right" title="Café da manhã">
                                 <span>
                                     <svg 
                                         id="orange-svg" enable-background="new 0 0 509.562 509.562" 
@@ -165,7 +171,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn2" data-target="talheres" class="btns talheres-svg-desk">
+                            <button type="button" id="btn2" data-target="talheres" class="btns talheres-svg-desk" data-toggle="tooltip" data-placement="right" title="Almoço com amigos">
                                 <span>
                                     <svg id="svg-talheres" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path
@@ -173,7 +179,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn3" data-target="tenis" class="btns tenis-svg-desk">
+                            <button type="button" id="btn3" data-target="tenis" class="btns tenis-svg-desk" data-toggle="tooltip" data-placement="right" title="Pré-treino">
                                 <span>
                                     <svg id="svg-tenis" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path
@@ -188,7 +194,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn4" data-target="food" class="btns food-svg-desk">
+                            <button type="button" id="btn4" data-target="food" class="btns food-svg-desk" data-toggle="tooltip" data-placement="right" title="Jantar com a família">
                                 <span>
                                     <svg id="svg-food" data-name="food" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path
@@ -214,7 +220,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn5" data-target="drink" class="btns drink-svg-desk">
+                            <button type="button" id="btn5" data-target="drink" class="btns drink-svg-desk" data-toggle="tooltip" data-placement="right" title="Esquenta pra noite">
                                 <span>
                                     <svg version="1.1" id="drink-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                         y="0px" viewBox="0 0 480 480" xml:space="preserve">
@@ -252,7 +258,7 @@
                     </div>
                     <div class="d-flex d-lg-none">
                         <div class="wrap-menu-smart-mob">
-                            <button type="button" id="btn1" data-target="maca" class="btns maca-svg-desk">
+                            <button type="button" id="btn1" data-target="maca" class="btns maca-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Café da manhã">
                                 <span>
                                     <svg id="orange-svg" enable-background="new 0 0 509.562 509.562" viewBox="0 0 509.562 509.562" width="512"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -261,7 +267,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn2" data-target="talheres" class="btns talheres-svg-desk">
+                            <button type="button" id="btn2" data-target="talheres" class="btns talheres-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Almoço com amigos">
                                 <span>
                                     <svg id="svg-talheres" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path
@@ -269,7 +275,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn3" data-target="tenis" class="btns tenis-svg-desk">
+                            <button type="button" id="btn3" data-target="tenis" class="btns tenis-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Pré-treino">
                                 <span>
                                     <svg id="svg-tenis" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path
@@ -284,7 +290,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn4" data-target="food" class="btns food-svg-desk">
+                            <button type="button" id="btn4" data-target="food" class="btns food-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Jantar com a família">
                                 <span>
                                     <svg id="svg-food" data-name="food" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path
@@ -310,7 +316,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn5" data-target="drink" class="btns drink-svg-desk">
+                            <button type="button" id="btn5" data-target="drink" class="btns drink-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Esquenta pra noite">
                                 <span>
                                     <svg version="1.1" id="drink-svg" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480" xml:space="preserve">
@@ -974,7 +980,7 @@
                 <div class="btn-prod">
                     <div class="wrap-menu-prod-desk">
                         <div class="center-btns-prod-desk dragscroll">
-                            <button type="button" id="btn-pro1" data-target="suco-fruta" class="btns-prod suco-fruta-svg-desk">
+                            <button type="button" id="btn-pro1" data-target="suco-fruta" class="btns-prod suco-fruta-svg-desk" data-toggle="tooltip" data-placement="bottom" title="100% Fruta">
                                 <span>
                                     <svg id="sucos-fruta-svg" data-name="sucos fruta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -986,7 +992,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro2" data-target="suco-funcional" class="btns-prod suco-funcional-svg-desk">
+                            <button type="button" id="btn-pro2" data-target="suco-funcional" class="btns-prod suco-funcional-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Funcionais">
                                 <span>
                                     <svg id="sucos-funcionais-svg" data-name="sucos funcionais" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 141.73 141.73">
@@ -997,7 +1003,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro3" data-target="nectares" class="btns-prod nectares-svg-desk">
+                            <button type="button" id="btn-pro3" data-target="nectares" class="btns-prod nectares-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Néctares">
                                 <span>
                                     <svg id="nectares-svg" data-name="nectares" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <defs />
@@ -1008,7 +1014,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro4" data-target="chas-quentes" class="btns-prod chas-svg-desk">
+                            <button type="button" id="btn-pro4" data-target="chas-quentes" class="btns-prod chas-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Chás">
                                 <span>
                                     <svg id="chas-quentes-svg" data-name="chas quentes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1021,7 +1027,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro5" data-target="cafes" class="btns-prod cafes-svg-desk">
+                            <button type="button" id="btn-pro5" data-target="cafes" class="btns-prod cafes-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Cafés">
                                 <span>
                                     <svg id="cafes-svg" data-name="cafes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1031,7 +1037,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro6" data-target="chocolates" class="btns-prod chocolates-svg-desk">
+                            <button type="button" id="btn-pro6" data-target="chocolates" class="btns-prod chocolates-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Chocolates">
                                 <span>
                                     <svg id="chocolates-svg" data-name="chocolates" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1044,7 +1050,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro7" data-target="refrigerantes" class="btns-prod refri-svg-desk">
+                            <button type="button" id="btn-pro7" data-target="refrigerantes" class="btns-prod refri-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Refrigerantes">
                                 <span>
                                     <svg id="refrigerantes-svg" data-name="refrigerantes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1056,7 +1062,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro8" data-target="frapes" class="btns-prod frapes-svg-desk">
+                            <button type="button" id="btn-pro8" data-target="frapes" class="btns-prod frapes-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Frapês">
                                 <span>
                                     <svg id="frapes-svg" data-name="frapes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1066,7 +1072,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro9" data-target="chas-gelados" class="btns-prod chas-gelados-svg-desk">
+                            <button type="button" id="btn-pro9" data-target="chas-gelados" class="btns-prod chas-gelados-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Chás Gelados">
                                 <span>
                                     <svg id="chas-gelados-svg" data-name="chas gelados" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1082,7 +1088,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro10" data-target="drinks-prod" class="btns-prod drinks-svg-desk">
+                            <button type="button" id="btn-pro10" data-target="drinks-prod" class="btns-prod drinks-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Drinks">
                                 <span>
                                     <svg id="drinks-svg" data-name="drinks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -1090,7 +1096,7 @@
                                     </svg>
                                 </span>
                             </button>
-                            <button type="button" id="btn-pro11" data-target="energy-drink" class="btns-prod energy-svg-desk">
+                            <button type="button" id="btn-pro11" data-target="energy-drink" class="btns-prod energy-svg-desk" data-toggle="tooltip" data-placement="bottom" title="Energy Drink">
                                 <span>
                                     <svg id="energy-drink-svg" data-name="energy drink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
                                         <path
@@ -2046,6 +2052,20 @@
                         </a>
                     </div>
                 </div>
+                <span class="text-infos-caps-seo">
+                    <p>Bebida concentrada</p>
+                    <p>Sabor original</p>
+                    <p>Tecnologogia inovadora e ecológica</p>
+                    <p>Vedação à vácuo</p>
+                    <p>Aproveitamento de 100% dos nutrientes</p>
+                    <p>Quente ou gelado? Tanto faz</p>
+                    <p>Ingredientes selecionados</p>
+                    <p>
+                        Com o código de pontos a máquina reconhece a 
+                        receita necessária e automaticamente prepara a bebida perfeita, 
+                        na medida e temperatura ideais.
+                    </p>
+                </span>
             </div>
         <!-- yellow -->
         <!-- blue -->
@@ -2385,6 +2405,19 @@
             </span>
         </div>
         <!-- youtube modal-->
+        <!-- modal saiba mais -->
+        <div class="modal-saibamais">
+            <div class="modal fade" id="modalSaibaMais" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal saiba mais -->
     </main>
     <!-- MAIN -->
     <!-- FOOTER -->

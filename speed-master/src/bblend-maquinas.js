@@ -1,8 +1,9 @@
 'use strict';
 
+//modal video youtube
 function playVideo(){
   $('.btn-play-white').on('click', function(){
-    $(".yt-destaque").css("display", "block");
+    $(".yt-destaque").css("display", "flex");
     $('.yt-destaque').append(' <iframe width="560" height="315"\
       src="https://www.youtube.com/embed/0PkugxJiJ94?autoplay=1&amp;loop=1" frameborder="0"\
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"\
@@ -18,7 +19,7 @@ function closeVideo() {
 }
 function playVideo2(){
   $('.btn-play-red').on('click', function(){
-    $(".yt-red").css("display", "block");
+    $(".yt-red").css("display", "flex");
     $('.yt-red').append(' <iframe width="560" height="315"\
       src="https://www.youtube.com/embed/hPonMCQgOBQ?autoplay=1&amp;loop=1" frameborder="0"\
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"\
@@ -38,6 +39,17 @@ $(document).ready(function () {
   playVideo2();
   closeVideo2();
 });
+
+//tooltip
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip({
+    trigger: 'click',
+  });
+  $('[data-toggle="tooltip"]').on('click', function (e) {
+    $('[data-toggle="tooltip"]').not(this).tooltip('hide');
+});
+});
+
 
 // vitrine modal
 let vitrineModal = {
@@ -101,7 +113,7 @@ window.onscroll = function() {
   if (prevScrollPos > currentScrollPos) {
     document.querySelector('.menu-header').style.top = '0';
   } else {
-    document.querySelector('.menu-header').style.top = '-50px';
+    document.querySelector('.menu-header').style.top = '-80px';
   }
   prevScrollPos = currentScrollPos;
 };
@@ -115,6 +127,11 @@ function btnSandwich(x) {
 function accFunc(x) {
   x.classList.toggle("arrow-down");
 };
+//accordion card-header color
+$('.accordion .card').on( "click", function() {
+	$(this).siblings().find(".card-header").removeClass("cd-active");
+	$(this).find(".card-header").toggleClass("cd-active");
+});
 
 //btns smart container
 $('.btns').click(function() {

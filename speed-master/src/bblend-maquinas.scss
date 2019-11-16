@@ -9,7 +9,7 @@ $color-white: white;
 $color-gray-light: rgba(106,106,106,1);
 $color-gray-bg-vendas: #eaeaea;
 $color-gray-dark: rgba(36,36,35,1);
-$color-purple: rgba(101,22,197,1);
+$color-purple: #6516c5;
 $color-yellow: rgba(255,228,0,1);
 $color-blue: rgba(61,156,252,1);
 $color-red: rgba(255,59,49,1);
@@ -118,28 +118,34 @@ a span:hover {
   color: $color-yellow;
   font-family: $gil-regular;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 12px;
+}
+.text-yellow-desk {
+  color: $color-yellow;
+  font-family: $gil-regular;
+  text-align: center;
+  font-size: 16px;
 }
 .tit-white-desk {
   color: $color-white;
-  font-family: $gil-bold;
+  font-family: 'Gilroy-Extrabold';
   text-align: center;
-  font-size: 2.2rem;
-  line-height: 40px;
+  font-size: 45px;
+  line-height: 50px;
 }
 .tit-darkPink-desk {
-  color: $color-pink-dark;
-  font-family: $gil-bold;
+  color: #a51493;
+  font-family: $gil-black;
   text-align: center;
-  font-size: 2.2rem;
-  line-height: 40px;
+  font-size: 45px;
+  line-height: 50px;
 }
 .tit-purple-desk {
   color: $color-purple;
-  font-family: $gil-bold;
+  font-family: $gil-black;
   text-align: center;
-  font-size: 2.2rem;
-  line-height: 40px;
+  font-size: 45px;
+  line-height: 50px;
   padding-top: 70px;
   margin-bottom: 30px;
 }
@@ -147,7 +153,7 @@ a span:hover {
   color: $color-white;
   font-family: $gil-regular;
   text-align: center;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .text-white-desk a {
   text-decoration: underline !important;
@@ -157,7 +163,7 @@ a span:hover {
   color: $color-gray-dark;
   font-family: $gil-medium;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
 }
 .text-darkPink-desk {
   color: $color-pink-dark;
@@ -286,16 +292,18 @@ th {
 /* HEADER */
 .menu-header {
   display: flex;
-  background-color: transparent;
+  background: rgba(0,0,0,0.8);
   z-index: 99;
   width: 100%;
   transition: top 0.3s ease-in-out;
   top: 0;
   position: fixed;
   align-items: center;
+  height: 80px;
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .menu-sandwich {
-  display: inline-block;
+  display: none;
   cursor: pointer;
   padding-right: 10px;
   padding-left: 10px;
@@ -330,17 +338,16 @@ th {
   color: $color-white;
   font-family: $gil-regular;
   text-align: center;
-  font-size: 1rem;
 }
 .nav-item {
   margin: 0 20px;
   margin-top: 12px;
 }
 .nav-item a {
-  color: $color-gray-light;
-  font-family: $gil-bold;
+  color: $color-white;
+  font-family: $gil-regular;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 15px;
 }
 .nav-item a::before {
   content: url("/arquivos/bd-pink-left.png");
@@ -351,7 +358,7 @@ th {
   position: absolute;
 }
 .nav-item a span {
-  padding-left: 15px;
+  padding-left: 16px;
   padding-right: 10px;
 }
 .nav-bar {
@@ -360,6 +367,7 @@ th {
 }
 .logo-bblend-white img {
   width: 100%;
+  max-width: 90px;
 }
 
 
@@ -370,11 +378,11 @@ th {
 }
 .img-logos-footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 30px 0 20px;
 }
 .img-logos-footer img {
   width: 100%;
-  max-width: 200px;
+  max-width: 250px;
 }
 .logo-amb-bras img {
   width: 100%;
@@ -397,6 +405,9 @@ th {
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* DESTAQUE MOB */
+.logo {
+  padding-left: 40px;
+}
 .group-destaque-mob {
   position: relative;
   width: 100%;
@@ -434,7 +445,7 @@ th {
 }
 .dest-mob {
   background-color: $color-pink-dark;
-  height: 450px;
+  height: 700px;
 }
 .btn-white-pink-mob {
   text-align: center;
@@ -510,13 +521,26 @@ th {
   z-index: 9;
   justify-content: center;
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 .btn-quero-minha-purple {
   border: 0px solid transparent;
   border-radius: 30px 10px 30px 10px;
   background-color: $color-purple;
-  padding: 10px;
+  padding: 15px;
   width: 280px;
+}
+.btn-play-red {
+  position: relative;
+  text-align: center;
+  right: 0;
+  padding-bottom: 30px;
+  top: 15px;
+  z-index: 9;
+}
+.btn-play-red a img {
+  width: 100%;
+  max-width: 220px;
 }
 
 /* YELLOW MOBILE */
@@ -536,14 +560,14 @@ th {
 }
 .selo-yellow-mob img {
   width: 100%;
-  max-width: 250px;
+  max-width: 333px;
 }
 .tit-green-desk {
-  font-family: $gil-bold;
-  font-size: 2rem;
-  color: green;
+  font-family: $gil-black;
+  font-size: 45px;
+  color: #0a8220;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 120px;
 }
 .texts-yellow p.tit-green-desk {
   margin-bottom: 0;
@@ -577,10 +601,11 @@ th {
 }
 .right-blue-mob .texts-top-blue .text-white-desk {
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
 }
 .right-blue-mob .texts-top-blue .text-white-desk span {
   font-family: $gil-bold;
+  font-size: 20px;
 }
 .right-blue-mob .texts-top-blue .btn-comprar-blue-desk,
 .right-blue-mob .texts-bottom-blue .btn-comprar-blue-desk {
@@ -588,11 +613,12 @@ th {
 }
 .right-blue-mob .texts-top-blue .btn-comprar-blue-desk a,
 .texts-bottom-blue .btn-comprar-blue-desk a {
-  font-size: 10px;
+  font-size: 14px;
+  font-family: $gil-bold;
 }
 .texts-bottom-blue .text-white-desk {
   text-align: left;
-  font-size: 14px;
+  font-size: 20px;
 }
 .texts-bottom-blue .text-white-desk span {
   font-family: $gil-bold;
@@ -655,12 +681,6 @@ th {
   position: relative;
   height: 640px;
 }
-.dest-video-desk .container {
-  padding-bottom: 40px;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
 .bg-video {
   position: absolute;
   top: 0;
@@ -672,7 +692,7 @@ th {
   z-index: -999;
 }
 .texts-dest-desk {
-  padding-top: 100px;
+  padding-top: 180px;
 }
 .texts-dest-desk .txt-yellow-desk {
   text-transform: uppercase;
@@ -697,12 +717,14 @@ th {
   display: none;
 }
 .yt-destaque iframe {
-  position:absolute;
-  left: 0; 
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  margin: auto;
+  position: relative;
+  top: 20%;
+  width: 1280px;
+  height: 500px;
+}
+.close-video-x {
+  position: relative;
+  top: 20%;
 }
 
 /* PURPLE PARALLAX DESKTOP */
@@ -715,7 +737,7 @@ th {
 .purple-desk {
   position: relative;
   height: 600px; 
-  background-color: $color-purple;
+  background-color: #760eca;
 }
 .caps-purple {
   position: absolute;
@@ -776,7 +798,7 @@ th {
 }
 .texts-smart-desk {
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 90px;
 }
 .purple-col-smart {
   position: absolute;
@@ -787,13 +809,11 @@ th {
   border: 0px solid #6516c5;
   border-radius: 10px 40px 10px 40px;
   position: absolute;
-  top: 200px;
-  left: 0;
+  top: 100px;
   bottom: 0;
-  right: 120px;
+  right: -200px;
   padding: 30px;
   overflow: hidden;
-  opacity: 0.7;
   width: 300px;
   height: 190px;
 }
@@ -827,15 +847,15 @@ th {
   border: 0px solid #b81455;
   border-radius: 40px 10px 40px 10px;
   position: absolute;
-  top: 300px;
-  left: 60px;
+  top: 200px;
   bottom: 0;
-  right: 0;
+  right: -400px;
   padding: 30px;
+  padding-right: 77px;
   overflow: hidden;
   height: 200px;
   opacity: 0.7;
-  width: 300px;
+  width: 400px;
 }
 .text-purple-box {
   position: relative;
@@ -852,7 +872,7 @@ p.text-purple-box span {
   color: white;
   font-family: Gilroy-Regular, sans-serif;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 14px;
   overflow: hidden;
   padding-right: 10px;
 }
@@ -864,7 +884,7 @@ p.text-purple-box span {
   display: grid;
   position: absolute;
   top: 200px;
-  left: 10%;
+  left: 12%;
   z-index: 10;
 }
 .btns-smart-desk {
@@ -945,8 +965,8 @@ p.text-purple-box span {
   height: 700px;
 }
 .wrap-menu-smart-desk svg {
-  width: 45px;
-  padding: 10px;
+  width: 50px;
+  padding: 12px;
   cursor: pointer;
 }
 .wrap-menu-smart-desk button {
@@ -1004,6 +1024,9 @@ p.text-purple-box span {
   height: 60px;
   border-radius: 0px 0px 30px 30px;
 }
+.texts-smart-desk .tit-white-desk {
+  font-family: 'Gilroy-Thin';
+}
 
 /* VENDAS DESKTOP */
 .hide,
@@ -1057,13 +1080,48 @@ p.text-purple-box span {
 }
 .slick-dots {
   top: 320px;
+  z-index: 9;
+  height: 10px;
 }
 .slick-dots li.slick-active button:before {
-  color:$color-pink-dark !important;
-  font-size: 14px;
+  font-size: 21px;
+  border: 1px solid $color-gray-light;
+  border-radius: 50%;
 }
 .slick-dots li button:before {
+  font-size: 12px;
+  line-height: 26px;
+  height: 23px;
+  width: 22px;
+  opacity: inherit;
+}
+#slick-slide-control00:before, 
+#slick-slide-control20::before  {
+  color: $color-pink-dark;
+}
+#slick-slide-control01:before, 
+#slick-slide-control21::before   {
+  color: $color-black;
+}
+#slick-slide-control02:before, 
+#slick-slide-control22::before   {
+  color: $color-white;
+}
+#slick-slide-control03:before, 
+#slick-slide-control23::before   {
   color: $color-gray-light;
+}
+#slick-slide-control04:before, 
+#slick-slide-control24::before   {
+  color: red;
+}
+#slick-slide-control10:before, 
+#slick-slide-control30::before   {
+  color: $color-white;
+}
+#slick-slide-control11:before, 
+#slick-slide-control31::before   {
+  color: black;
 }
 .links-bottom-vendas-desk {
   margin-top: 30px;
@@ -1339,7 +1397,7 @@ p.text-purple-box span {
 }
 .text-produtos-desk .tit-darkPink-desk {
   padding: 50px 0 0;
-  font-size: 2.2rem;
+  font-size: 45px;
 }
 .text-produtos-desk .text-darkGray-desk {
   font-size: 1.1rem;
@@ -1348,6 +1406,7 @@ p.text-purple-box span {
   width: 48px;
   padding: 10px;
   cursor: pointer;
+  margin-left: 10px;
 }
 .center-btns-prod-desk button {
   background: #efefef;
@@ -1365,7 +1424,7 @@ p.text-purple-box span {
   position: absolute;
   top: 0;
   left: 0;
-  right: 620px;
+  right: 727px;
   bottom: 0;
   height: 48px;
   z-index: -1;
@@ -1395,26 +1454,32 @@ p.text-purple-box span {
   background-size: contain;
   position: absolute;
   top: 0;
-  left: 645px;
+  left: 760px;
   right: 0;
   bottom: 0;
   height: 48px;
   z-index: -1;
 }
-
+.tooltip-inner {
+  background-color: $color-pink-dark !important;
+}
+.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, 
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: $color-pink-dark !important;
+}
 
 /* RED DESKTOP */
 .red-desk {
   position: relative;
   width: 100%;
-  height: 620px;
+  height: 720px;
   background-color: $color-red;
 }
 .bg-red-desk {
   background-color: $color-red;
 }
 .bg-red-desk div .tit-purple-desk {
-  padding-top: 75px;
+  padding-top: 120px;
   z-index: 9;
 }
 .bg-red-desk::before {
@@ -1432,20 +1497,23 @@ p.text-purple-box span {
 }
 .gif-red-desk {
   text-align: right;
-  margin-right: 30px;
+  padding-bottom: 20px;
 }
 .gif-red-desk img {
   width: 100%;
-  max-width: 360px;
   margin-right: 15px;
 }
-.tit-yellow-red-1,
-.tit-yellow-red-2,
-.tit-yellow-red-3 {
-  color: $color-yellow;
+.texts-red {
+  padding-top: 55px;
+}
+.texts-red .tit-yellow-red-1,
+.texts-red .tit-yellow-red-2,
+.texts-red .tit-yellow-red-3 {
+  text-align: center;
+  margin-bottom: 0;
   font-family: $gil-bold;
-  text-align: left;
-  font-size: 16px;
+  font-size: 20px;
+  color: $color-yellow;
 }
 .tit-yellow-red-1::before {
   content: "";
@@ -1461,37 +1529,36 @@ p.text-purple-box span {
 }
 .tit-yellow-red-2::before {
   content: "";
-  background-image: url("/arquivos/two-yellow.png");
-  background-position: left top;
+  background-image: url(/arquivos/two-yellow.png);
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: auto;
   position: absolute;
-  top: 93px;
-  left: -30px;
+  top: 155px;
+  left: 0;
   bottom: 0;
   right: 0;
 }
 .tit-yellow-red-3::before {
   content: "";
-  background-image: url("/arquivos/three-yellow.png");
-  background-position: left top;
+  background-image: url(/arquivos/three-yellow.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
   position: absolute;
-  top: 171px;
-  left: -30px;
+  top: 50px;
+  left: 0;
   bottom: 0;
   right: 0;
 }
 .tit-yellow-red p {
   margin-bottom: 0;
 }
-.texts-red {
-  padding-right: 40px;
-}
 .texts-red .text-white-desk {
-  text-align: left;
+  text-align: center;
   font-size: 14px;
+  font-family: $gil-regular;
+  color: $color-white;
 }
 .btn-purple-red {
   position: relative;
@@ -1511,17 +1578,6 @@ p.text-purple-box span {
   font-family: $gil-bold;
   color: $color-white;
 }
-.btn-play-red {
-  text-align: right;
-  margin-right: 60px;
-  padding-top: 80px;
-  position: relative;
-  z-index: 9;
-}
-.btn-play-red a img {
-  width: 100%;
-  max-width: 250px;
-}
 .yt-red {
   background: rgba(49, 45, 45, 0.9);
   overflow: hidden;
@@ -1538,19 +1594,17 @@ p.text-purple-box span {
   display: none;
 }
 .yt-red iframe {
-  position:absolute;
-  left:0; 
-  right:0;
-  top:0; 
-  bottom:0;
-  margin:auto;
+  position: relative;
+  top: 20%;
+  width: 1280px;
+  height: 500px;
 }
 
 
 /* YELLOW DESKTOP */
 .yellow-desk {
   position: relative;
-  height: 620px;
+  height: 720px;
   background-color: $color-yellow;
 }
 .right-3d {
@@ -1585,34 +1639,37 @@ p.text-purple-box span {
 .texts-yellow .text-darkGray-desk::after {
   content: "";
   background-image: url("/arquivos/selo-natural.png");
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 95px;
-  left: 0;
-  right: 600px;
+  top: 168px;
+  right: 0;
+  left: 180px;
   height: 60px;
 }
 .texts-yellow .text-darkGray-desk::before {
   content: "";
   background-image: url("/arquivos/selo-sabor.png");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 90px;
-  left: 580px;
+  top: 168px;
+  left: 0;
   bottom: 0;
-  right: 0px;
+  right: 200px;
   height: 60px;
+}
+.text-infos-caps-seo {
+  display: none;
 }
 
 /* BLUE DESKTOP */
 .blue-desk {
   position: relative;
   width: 100%;
-  height: 650px;
+  height: 720px;
   background-color: $color-blue;
 }
 .center-blue {
@@ -1627,14 +1684,14 @@ p.text-purple-box span {
   position: relative;
 }
 .btn-comprar-blue-desk a {
-  color: $color-pink-dark;
-  font-family: $gil-medium;
+  color: #a51493;
+  font-family: $gil-bold;
   text-align: left;
-  font-size: 1rem;
+  font-size: 15px;
 }
 .btn-comprar-blue-desk a span {
-  padding-left: 15px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 17px;
 }
 .btn-comprar-blue-desk a::before {
   content: url("/arquivos/bd-left-pink.png");
@@ -1645,27 +1702,41 @@ p.text-purple-box span {
   position: absolute;
 }
 .texts-blue-desk {
-  padding-top: 90px;
+  padding-top: 120px;
+}
+.texts-blue-desk .text-white-desk {
+  font-family: $gil-medium;
+  font-size: 20px;
+}
+.left-blue {
+  right: -40px;
 }
 .left-blue .text-white-desk {
   font-family: $gil-regular;
+  font-size: 15px;
   text-align: right;
   margin-right: -10px;
-  padding-top: 160px;
-  padding-left: 100px;
+  padding-top: 120px;
+  padding-left: 90px;
 }
 .left-blue .text-white-desk span {
   font-family: $gil-bold;
+  font-size: 20px;
   text-align: right;
+}
+.right-blue {
+  right: 40px;
 }
 .right-blue .text-white-desk {
   font-family: $gil-regular;
+  font-size: 15px;
   text-align: left;
-  padding-right: 90px;
-  padding-top: 160px;
+  padding-right: 80px;
+  padding-top: 120px;
 }
 .right-blue .text-white-desk span {
   font-family: $gil-bold;
+  font-size: 20px;
   text-align: left;
 }
 .right-blue .btn-comprar-blue-desk {
@@ -1678,12 +1749,9 @@ p.text-purple-box span {
   max-width: 900px;
   height: auto;
   background-color: $color-white;
-  padding-top: 120px;
+  padding-top: 80px;
   padding-bottom: 60px;
   position: relative;
-}
-.card-header {
-  padding: 0 !important;
 }
 .tit-duvidas {
   text-align: center;
@@ -1695,7 +1763,7 @@ p.text-purple-box span {
   color: $color-pink-dark;
   font-family: $gil-black;
   text-align: center;
-  font-size: 2rem;
+  font-size: 45px;
 }
 .text-duvidas-mob {
   color: $color-gray-dark;
@@ -1705,20 +1773,40 @@ p.text-purple-box span {
   margin: 20px 0;
   line-height: 22px;
 }
+.text-duvidas-mob span {
+  font-family: $gil-bold;
+}
 .card-body {
   background-color: $color-gray-bg-vendas !important;
   color: rgba(116,116,116,1);
   font-family: 'Gilroy-Regular';
+  font-size: 15px;
+  padding: 2rem !important;
 }
 .card-header {
+  padding: 0 !important;
+  border-bottom: 3px solid #9f114a !important;
   background-color: $color-pink-dark !important;
-  border-bottom: 2px solid rgba(184,20,85,1)!important;
 }
 .card-header h2 {
   font-family: 'Gilroy-Regular';
 }
+.cd-active {
+  transition: all .5s;
+  background-color: #960d43 !important;
+}
 .card {
-  border-radius: 10px;
+  border: none !important;
+}
+.accordion>.card:first-of-type {
+  border-radius: 10px !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.accordion>.card:last-of-type {
+  border-radius: 10px !important;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
 button.btn.btn-link {
   color: rgba(255,255,255,1);
@@ -1752,6 +1840,17 @@ button.btn.btn-link {
   font-family: $gil-bold;
   color: $color-pink-dark;
 }
+.accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.duvidas-desk .accordion .card .card-header h2 button {
+  padding: 10px 20px;
+}
+.duvidas-desk .accordion .card .card-header h2 {
+  font-family: $gil-medium;
+  font-size: 18px;
+}
 
 /* FOOTER DESKTOP */
 .footer-style-mob {
@@ -1763,8 +1862,17 @@ button.btn.btn-link {
 .logos-mob img {
   margin-top: 30px;
 }
+.text-footer {
+  padding-bottom: 10px;
+}
 .text-footer p {
   font-family: 'Gilroy-Regular';
+  font-size: 12px;
+  line-height: 18px;
+  margin: 1rem;
+}
+.text-footer p.text-white-desk {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 18px;
   margin: 1rem;
@@ -1785,6 +1893,10 @@ button.btn.btn-link {
 .line-footer {
   border-top: 5px solid $color-pink-dark;
   border-bottom: 5px solid $color-gray-bg-vendas;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  z-index: 99;
 }
 .border-footer {
   border-left: 1px solid $color-gray-bg-vendas;
@@ -1793,9 +1905,37 @@ button.btn.btn-link {
 
 /* MEDIA QUERY */
 @media screen and (max-width: 640px) {
-  .tit-yellow-red-2::before {
-    top: -180px;
+  .footer-style {
+    margin-bottom: 60px;
   }
+  .duvidas-desk {
+    padding-bottom: 80px;
+  }
+  .preco-promo {
+    font-size: 9px;
+  }
+  .preco-produto {
+    font-size: 21px;
+  }
+  .vid-x, 
+  .vid-x2 {
+    position: fixed;
+    top: 10%;
+  }
+  .yt-destaque iframe,
+  .yt-red iframe {
+    width: 100%;
+    height: 200px;
+    top: 20%;
+    position: relative; 
+  }
+  .swiper-slide div img {
+    max-width: 280px;
+  }
+  .wrapper-box-prod-desk {
+    width: 208px !important;
+  }
+
   .btn-left,
   .btn-center,
   .btn-right {
@@ -1813,13 +1953,24 @@ button.btn.btn-link {
     padding-left: 0;
   }
 }
-@media screen and (max-width: 768px) {
-  .tit-yellow-red-3::before {
-    top: 80px;
+@media screen and (min-width: 640px) {
+  .footer-style {
+    margin-bottom: 60px;
   }
+
+}
+@media screen and (min-width: 768px) {
   .tit-yellow-red-2::before {
-    top: -165px;
+    top: 140px;
   }
+  .tit-yellow-red-3::before {
+    top: 30px;
+  }
+  .footer-style {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
   .texts-bottom-blue {
     padding-top: 40px;
   }
@@ -1829,13 +1980,51 @@ button.btn.btn-link {
     padding-top: 60px;
   }
   .blue-desk {
-    height: auto;
+    height: 820px;
   }
   .nav-item a {
     color: $color-white;
   }
   .text-purple-box {
     font-size: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .gif-red-desk {
+    padding-right: 30px;
+  }
+  .tit-yellow-red-3::before {
+    background-position: left;
+    top: 35px;
+    left: -30px;
+  }
+  .tit-yellow-red-2::before {
+    background-position: left top;
+    top: 83px;
+    left: -30px;
+  }
+  .texts-red {
+    padding-top: 0;
+    padding-right: 120px;
+  }
+  .gif-red-desk img {
+    max-width: 350px;
+  }
+  .btn-play-red {
+    text-align: right;
+    right: 47px;
+    top: 42px;
+  }
+  .texts-red .tit-yellow-red-1,
+  .texts-red .tit-yellow-red-2,
+  .texts-red .tit-yellow-red-3 {
+    text-align: left;
+  }
+  .texts-red .text-white-desk {
+    text-align: left;
+    font-size: 14px;
+    font-family: $gil-regular;
+    color: $color-white;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1867,17 +2056,6 @@ button.btn.btn-link {
     position: relative;
     left: -25px;
     padding-bottom: 30px;
-  }
-  .btn-buy-red-mob {
-    padding-bottom: 30px;
-  }
-  .btn-play-red {
-    text-align: center;
-    margin-right: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    z-index: 9;
-    position: relative;
   }
   .links-bottom-vendas-desk .frete-vendas1-desk,
   .links-bottom-vendas-desk .comparar-vendas1-desk {
@@ -2007,7 +2185,6 @@ button.btn.btn-link {
     left: 0;
     bottom: -24px;
     right: 0;
-    z-index: 1;
   }
   .btn-play-white {
     padding: 1rem;
@@ -2023,24 +2200,8 @@ button.btn.btn-link {
     text-transform: uppercase;
     padding-top: 30px;
   }
-  .texts-red {
-    text-align: center;
-    padding-top: 60px;
-    padding-right: 0;
-  }
-  .texts-red .text-white-desk,
-  .texts-red .tit-yellow-red-1,
-  .texts-red .tit-yellow-red-2,
-  .texts-red .tit-yellow-red-3 {
-    text-align: center;
-    margin-bottom: 0;
-  }
   .red-desk {
     height: auto;
-  }
-  .gif-red-desk {
-    margin-right: 0;
-    text-align: center;
   }
   .wrapper-box-prod-desk {
     width: 240px;
@@ -2054,19 +2215,59 @@ button.btn.btn-link {
     top: 20px;
     left: 0;
   }
-  .tit-yellow-red-2::before {
-    background-position: center;
-    top: -195px;
-    left: 0;
-  }
-  .tit-yellow-red-3::before {
-    background-position: center;
-    top: 50px;
-    left: 0;
+
+}
+@media screen and (min-width: 1200px) {
+  .box-pink-smart {
+    right: -360px;
   }
 }
 @media screen and (max-width: 1200px) {
+  .texts-yellow .text-darkGray-desk::before {
+    right: 80px;
+}
+  .texts-yellow .text-darkGray-desk::after {
+    left: 50px !important;
+  }
+  .right-blue {
+    right: 22px;
+  }
+  .left-blue {
+    right: -10px;
+  }
+  .center-blue img {
+    max-width: 280px;
+  }
+  .wrap-menu-smart-desk {
+    left: 8%;
+  }
+  .nav-item a span {
+    padding-left: 10px;
+    padding-right: 4px;
+  }
   .dest-video-desk {
     height: 550px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .box-pink-smart {
+    right: -320px;
+    padding-right: 100px;
+  }
+  .box-purple-smart {
+    right: -300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .box-pink-smart {
+    right: -360px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .box-pink-smart {
+    right: -430px;
+    padding-right: 20px;
   }
 }
