@@ -671,7 +671,7 @@ svg {
 }
 .btn-right a img {
   width: 100%;
-  max-width: 110px;
+  max-width: 100px;
 }
 /* DESTAQUE DESKTOP */
 .img-capsulas-desk {
@@ -1511,6 +1511,10 @@ p.text-purple-box span {
   opacity: initial;
   box-shadow: 0 0 0 2px white;
 }
+.swiper-slide div img {
+  width: 100%;
+  min-width: 200px;
+}
 .btn-comprar-prod-desk {
   position: relative;
   text-align: center;
@@ -1540,7 +1544,7 @@ p.text-purple-box span {
   width: 260px;
   height: 170px;
   top: -230px;
-  right: -295px;
+  right: -90%;
   border: 1px solid $color-white;
   border-radius: 0px 10px 40px 0px;
   z-index: -1;
@@ -1573,8 +1577,6 @@ p.text-purple-box span {
   position: relative;
   top: -10px;
 }
-
-
 .white-box-prod-desk {
   position: absolute;
   top: 10px;
@@ -1702,6 +1704,7 @@ p.text-purple-box span {
   text-transform: uppercase;
   position: relative;
   top: 90px;
+  padding-bottom: 60px;
 }
 .txt-apartir::before {
   content: "";
@@ -2150,6 +2153,46 @@ button.btn.btn-link {
 }
 
 /* MEDIA QUERY */
+@media screen and (min-width: 340px) {
+  .wrapper-box-prod-mob {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 370px) {
+  .wrapper-box-prod-mob {
+    width: 260px;
+    left: 41px;
+  }
+}
+@media screen and (min-width: 420px) {
+  .wrapper-box-prod-mob {
+    left: 65px;
+  }
+}
+@media screen and (min-width: 490px) {
+  .wrapper-box-prod-mob {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 520px) {
+  .wrapper-box-prod-mob {
+    width: 340px;
+  }
+}
+@media screen and (min-width: 596px) {
+  .wrapper-box-prod-mob {
+    width: 203px;
+    height: 153px;
+    left: 50px;
+  }
+  .txt-apartir {
+    display: none;
+  }
+  .swiper-slide div img {
+    width: 100%;
+    min-width: 300px;
+  }
+}
 @media screen and (max-width: 596px) {
   .texts-yellow p.tit-green-desk {
     padding-top: 60px;
@@ -2202,17 +2245,6 @@ button.btn.btn-link {
     top: 100px;
   }
 }
-@media screen and (min-width: 596px) {
-  .wrapper-box-prod-mob {
-    width: 240px;
-    height: 120px;
-  }
-  .txt-apartir {
-    display: none;
-  }
-}
-
-
 @media screen and (max-width: 640px) {
   .blue-desk {
     height: 850px;
@@ -2234,12 +2266,6 @@ button.btn.btn-link {
     height: 200px;
     top: 20%;
     position: relative; 
-  }
-  .swiper-slide div img {
-    max-width: 280px;
-  }
-  .wrapper-box-prod-desk {
-    width: 208px !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2268,7 +2294,7 @@ button.btn.btn-link {
 @media screen and (min-width: 992px) {
   .swiper-container {
     min-height: 560px;
-    height: 400px;
+    height: 100%;
     padding-bottom: 0;
   }
   .btn-comprar-prod-desk {
@@ -2474,7 +2500,6 @@ button.btn.btn-link {
     top: 20px;
     left: 0;
   }
-
 }
 @media screen and (min-width: 1200px) {
   .box-pink-smart {
@@ -2527,7 +2552,7 @@ button.btn.btn-link {
     position: absolute;
     top: 0;
     left: 0;
-    right: 727px;
+    right: 735px;
     bottom: 0;
     height: 48px;
     z-index: -1;
