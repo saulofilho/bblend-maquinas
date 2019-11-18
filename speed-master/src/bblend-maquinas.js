@@ -50,7 +50,6 @@ $(document).ready(function(){
 });
 });
 
-
 // vitrine modal
 let vitrineModal = {
   getColecao: $.ajax({
@@ -103,7 +102,7 @@ $(document).ready(function() {
 
 //fade desktop
 $(window).scroll(function(){
-  $(".purple-desk").css("opacity", 1 - $(window).scrollTop() / 1250);
+  $(".purple-desk").css("opacity", 1 - $(window).scrollTop() / 2250);
 });
 
 //header efeito
@@ -184,13 +183,17 @@ let swiperSucoFru = new Swiper('.suco-fruta-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -198,18 +201,34 @@ let swiperSucoFru = new Swiper('.suco-fruta-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperSucoFun = new Swiper('.suco-funcional-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -217,18 +236,34 @@ let swiperSucoFun = new Swiper('.suco-funcional-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperNec = new Swiper('.nectares-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -236,18 +271,34 @@ let swiperNec = new Swiper('.nectares-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperChaHot = new Swiper('.chas-quentes-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -255,18 +306,34 @@ let swiperChaHot = new Swiper('.chas-quentes-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperCafes = new Swiper('.cafes-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -274,6 +341,18 @@ let swiperCafes = new Swiper('.cafes-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperChoco = new Swiper('.chocolates-cont', {
   observer: true,
@@ -298,13 +377,17 @@ let swiperRefri = new Swiper('.refri-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -312,18 +395,34 @@ let swiperRefri = new Swiper('.refri-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperFrapes = new Swiper('.frapes-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -331,18 +430,34 @@ let swiperFrapes = new Swiper('.frapes-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperChasGel = new Swiper('.chas-gelados-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -350,18 +465,34 @@ let swiperChasGel = new Swiper('.chas-gelados-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperDrinks = new Swiper('.drinks-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -369,18 +500,34 @@ let swiperDrinks = new Swiper('.drinks-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });
 let swiperEnergy = new Swiper('.energy-cont', {
   observer: true,
   observeParents: true,
   effect: 'coverflow',
+  loop: true,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 5,
+  lazyLoading: true,
+  lazyLoadingInPrevNext: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
-    stretch: 120,
-    depth: 300,
+    stretch: 0,
+    depth: 0,
     modifier: 1,
     slideShadows: false,
   },
@@ -388,4 +535,16 @@ let swiperEnergy = new Swiper('.energy-cont', {
     el: '.swiper-pagination',
     bullets: true,
   },
+  breakpoints: {
+    596: {
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 350,
+        modifier: 1,
+        slideShadows: false,
+      },
+    }
+  }
 });

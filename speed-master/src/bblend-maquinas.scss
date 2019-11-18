@@ -1,4 +1,5 @@
 $gil-black: Gilroy-Black, sans-serif;
+$gil-light: Gilroy-Light, sans-serif;
 $gil-bold: Gilroy-Bold, sans-serif;
 $gil-regular: Gilroy-Regular, sans-serif;
 $gil-medium: Gilroy-Medium, sans-serif;
@@ -134,10 +135,10 @@ a span:hover {
   line-height: 50px;
 }
 .tit-darkPink-desk {
-  color: #a51493;
+  color: $color-pink-dark;
   font-family: $gil-black;
   text-align: center;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 50px;
 }
 .tit-purple-desk {
@@ -146,7 +147,6 @@ a span:hover {
   text-align: center;
   font-size: 45px;
   line-height: 50px;
-  padding-top: 70px;
   margin-bottom: 30px;
 }
 .text-white-desk {
@@ -163,7 +163,10 @@ a span:hover {
   color: $color-gray-dark;
   font-family: $gil-medium;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
+}
+.text-darkGray-desk span {
+  font-family: $gil-bold;
 }
 .text-darkPink-desk {
   color: $color-pink-dark;
@@ -370,7 +373,6 @@ th {
   max-width: 90px;
 }
 
-
 /* FOOTER */
 .footer-style {
   background-color: $color-pink-dark;
@@ -388,19 +390,8 @@ th {
   width: 100%;
   max-width: 111px;
 }
-.btn-left,
-.btn-center,
-.btn-right {
-  padding: 1rem;
-}
-.btn-left img,
-.btn-center img {
-  width: 100%;
-  max-width: 150px;
-}
-.btn-right img {
-  width: 100%;
-  max-width: 110px;
+.fot-txt-seo {
+  display: none;
 }
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -445,7 +436,7 @@ th {
 }
 .dest-mob {
   background-color: $color-pink-dark;
-  height: 700px;
+  height: auto;
 }
 .btn-white-pink-mob {
   text-align: center;
@@ -463,6 +454,9 @@ th {
   width: 100%;
   max-width: 150px;
 }
+.group-btns-mob {
+  padding-bottom: 50px;
+}
 
 /* SMART MOB */
 .swi-sli-mob {
@@ -479,6 +473,9 @@ th {
   bottom: 0;
   z-index: 1;
   text-align: center;
+}
+svg {
+  fill: gray;
 }
 .wrap-menu-smart-mob svg {
   width: 45px;
@@ -503,18 +500,18 @@ th {
   bottom: 31px;
   padding: 30px;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 0.9;
   width: 270px;
   height: 115px;
 }
 .box-purple-smart-mob p.tit-purple-box {
   color: $color-white;
-  font-family: $gil-regular;
+  font-family: $gil-light;
   text-align: left;
-  font-size: 1rem;
+  font-size: 20px;
   margin-top: -20px;
+  margin-bottom: 0px;
 }
-
 /* RED MOBILE */
 .btn-buy-red-mob {
   position: relative;
@@ -537,12 +534,13 @@ th {
   padding-bottom: 30px;
   top: 15px;
   z-index: 9;
+  cursor: pointer;
 }
-.btn-play-red a img {
+.btn-play-red img {
   width: 100%;
   max-width: 220px;
+  cursor: pointer;
 }
-
 /* YELLOW MOBILE */
 .btn-green-yellow {
   text-align: center;
@@ -567,7 +565,7 @@ th {
   font-size: 45px;
   color: #0a8220;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 70px;
 }
 .texts-yellow p.tit-green-desk {
   margin-bottom: 0;
@@ -578,7 +576,6 @@ th {
 .left-3d-mob img {
   width: 100%;
 }
-
 /* BLUE MOBILE */
 .blue-mob {
   background-color: $color-blue;
@@ -590,7 +587,7 @@ th {
 }
 .img-blue-cel-mob {
   background-image: url("/arquivos/celulares-blue-mob.png");
-  background-position: left top;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -623,7 +620,6 @@ th {
 .texts-bottom-blue .text-white-desk span {
   font-family: $gil-bold;
 }
-
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx DESKTOP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* FIXED MENU */
 .tele-redes {
@@ -636,6 +632,9 @@ th {
   color: white;
   font-family: 'Gilroy-Regular';
 }
+.televendas p.text-white-desk {
+  font-size: 12px;
+}
 .televendas-footer {
   font-family: 'Gilroy-Bold';
 }
@@ -643,9 +642,10 @@ th {
   display: flex;
   align-items: baseline;
 }
-.redes-sociais p {
+.redes-sociais p.text-white-desk {
   color: white;
   font-family: 'Gilroy-Regular';
+  font-size: 12px;
 }
 .redes-sociais a {
   color: white;
@@ -654,12 +654,37 @@ th {
 .logos-sociais {
   align-items: baseline;
 }
+.btn-left {
+  padding: 10px 0;
+}
+.btn-left a img {
+  width: 100%;
+}
+.btn-center {
+  padding: 10px 0;
+}
+.btn-center a img {
+  width: 100%;
+}
+.btn-right {
+  padding: 10px 0;
+}
+.btn-right a img {
+  width: 100%;
+  max-width: 110px;
+}
 /* DESTAQUE DESKTOP */
 .img-capsulas-desk {
   width: 100%;
   text-align: center;
 }
-.btn-play-white, 
+.btn-play-white {
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  top: 12px;
+}
 .btn-white-pink {
   padding: 0 1rem;
 }
@@ -674,25 +699,39 @@ th {
   bottom: 0;
   right: 0;
 }
-.btn-play-white a img {
+.btn-play-white img {
   width: 100%;
+  max-width: 210px;
 }
 .dest-video-desk {
   position: relative;
-  height: 640px;
+  height: 650px;
 }
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -999;
+  height: 650px;
 }
 .bg-video video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
   width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
   z-index: -999;
 }
 .texts-dest-desk {
-  padding-top: 180px;
+  padding-top: 130px;
 }
 .texts-dest-desk .txt-yellow-desk {
   text-transform: uppercase;
@@ -718,7 +757,7 @@ th {
 }
 .yt-destaque iframe {
   position: relative;
-  top: 20%;
+  top: 10%;
   width: 1280px;
   height: 500px;
 }
@@ -736,12 +775,12 @@ th {
 }
 .purple-desk {
   position: relative;
-  height: 600px; 
+  height: 700px; 
   background-color: #760eca;
 }
 .caps-purple {
   position: absolute;
-  top: 700px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -749,7 +788,7 @@ th {
 }
 .para-img-1 {
   position: absolute;
-  top: -70px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 500px;
@@ -759,7 +798,7 @@ th {
   right: 0;
   bottom: 40px;
   left: 0;
-  top: 80px;
+  top: 130px;
 }
 .para-img-3 {
   position: absolute;
@@ -791,6 +830,27 @@ th {
   width: 100%;
   max-width: 200px;
 }
+.pingo {
+  text-align: center;
+  position: relative;
+  top: 5px;
+  right: 0;
+  left: 0;
+}
+#maca-parallax {
+  background-image: url("/arquivos/img-smart-woman-desk_optimized.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+strong {
+  font-family: $gil-bold;
+}
 
 /* SMART DESKTOP */
 .smart-desk {
@@ -819,9 +879,9 @@ th {
 }
 .box-purple-smart p.tit-purple-box {
   color: $color-white;
-  font-family: Gilroy-Light;
+  font-family: $gil-light;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 15px;
 }
 .box-purple-smart .btn-purple-box {
   text-align: center;
@@ -853,7 +913,7 @@ th {
   padding: 30px;
   padding-right: 77px;
   overflow: hidden;
-  height: 200px;
+  height: 240px;
   opacity: 0.7;
   width: 400px;
 }
@@ -862,23 +922,54 @@ th {
   color: $color-white;
   font-family: $gil-regular;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 15px;
+  line-height: 17px;
 }
 p.text-purple-box span {
   font-family: $gil-bold;
 }
-.text-pink-box,
+.text-pink-box {
+  color: white;
+  font-family: $gil-regular;
+  text-align: left;
+  font-size: 14px;
+  overflow: hidden;
+  padding-right: 10px;
+  padding-top: 30px;
+}
 .name-pink-box {
   color: white;
-  font-family: Gilroy-Regular, sans-serif;
+  font-family: $gil-regular;
   text-align: left;
   font-size: 14px;
   overflow: hidden;
   padding-right: 10px;
 }
-.aspas {
+.name-pink-box::before {
+  content: "";
+  background-image: url("/arquivos/barra-branca.png");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  bottom: 67px;
+  right: 0;
+}
+.name-pink-box span {
   font-family: $gil-bold;
-  font-size: 1.2rem;
+}
+.aspas {
+  background-image: url("/arquivos/aspas.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 25px;
+  left: 31px;
+  bottom: 0;
+  right: 0;
 }
 .wrap-menu-smart-desk {
   display: grid;
@@ -1048,7 +1139,7 @@ p.text-purple-box span {
   display: none;
 }
 .shelf-bblend-maquinas ul {
-  max-width: 420px;
+  max-width: 300px;
   margin: 0 auto;
 }
 .botoes {
@@ -1056,7 +1147,6 @@ p.text-purple-box span {
   border-radius: 30px 10px 30px 10px;
   background-color: $color-pink-dark;
   padding: 10px;
-  max-width: 280px;
   margin: 0 auto;
 }
 .btn-buy-enjoy {
@@ -1075,8 +1165,8 @@ p.text-purple-box span {
   outline: none; 
 }
 .slick-list {
-  height: auto;
-  z-index: 1;
+  position: relative;
+  overflow: hidden;
 }
 .slick-dots {
   top: 320px;
@@ -1135,6 +1225,36 @@ p.text-purple-box span {
 .links-bottom-vendas-desk .especifica-vendas1-desk {
   text-align: center;
 }
+.especifica-vendas1-desk a {
+  position: relative;
+  z-index: 1;
+}
+.especifica-vendas1-desk::before {
+  content: "";
+  background: url("/arquivos/barra.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.especifica-vendas1-desk::after {
+  content: "";
+  background: url("/arquivos/barra.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
 .links-bottom-vendas-desk .frete-vendas1-desk {
   text-align: left;
 }
@@ -1142,6 +1262,9 @@ p.text-purple-box span {
   font-family: $gil-bold;
   text-decoration: underline;
   color: $color-gray-dark;
+}
+.texts-vendas {
+  padding-top: 70px;
 }
 .texts-vendas .tit-purple-desk {
   color: $color-pink-dark;
@@ -1160,12 +1283,8 @@ p.text-purple-box span {
   color: $color-pink-dark;
   font-family: $gil-bold;
   text-align: left;
-  font-size: 16px;
-  padding-left: 70px;
+  font-size: 20px;
   padding-top: 60px;
-}
-.descricao {
-  padding-left: 70px;
 }
 .descricao p {
   color: $color-gray-dark;
@@ -1206,8 +1325,14 @@ p.text-purple-box span {
   right: 0;
   bottom: 0;
 }
+.image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .image img {
-  margin: 0 auto;
+  width: 200px;
+  height: 200px;
 }
 .preco-produto {
   font-size: 24px;
@@ -1226,19 +1351,18 @@ p.text-purple-box span {
   border-radius: 10px;
   background-color: white;
   padding: 10px;
-  max-width: 280px;
   margin: 0 auto;
   margin-bottom: 20px;
-  height: 65px;
+  height: 55px;
   overflow: hidden;
 }
 .preco-original {
-  font-family: $gil-medium;
-  color: $color-gray-light;
+  font-family: $gil-bold;
+  color: #a9a9a9;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 0;
-  padding-top: 15px;
+  padding-top: 8px;
   overflow: hidden;
 }
 .preco-promo {
@@ -1271,6 +1395,75 @@ p.text-purple-box span {
   top: -15px;
   right: -10px;
 }
+.links-bottom-vendas-desk div a {
+  font-size: 13px;
+  text-align: center;
+}
+.links-bottom-vendas-desk div {
+  line-height: 12px;
+}
+.links-bottom-vendas-desk .frete-vendas1-desk,
+.links-bottom-vendas-desk .comparar-vendas1-desk {
+  text-align: center;
+}
+.img-bg-prod {
+  position: relative;
+  height: 300px;
+}
+#slick-slide00 .img-bg-prod, 
+#slick-slide01 .img-bg-prod, 
+#slick-slide02 .img-bg-prod, 
+#slick-slide03 .img-bg-prod, 
+#slick-slide04 .img-bg-prod {
+  background-image: url("/arquivos/brinde-vendas.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#slick-slide10 .img-bg-prod,
+#slick-slide11 .img-bg-prod {
+  background-image: url("/arquivos/mao-vendas.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#slick-slide20 .img-bg-prod,
+#slick-slide21 .img-bg-prod,
+#slick-slide22 .img-bg-prod,
+#slick-slide23 .img-bg-prod,
+#slick-slide24 .img-bg-prod {
+  background-image: url("/arquivos/girl-smart.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#slick-slide30 .img-bg-prod,
+#slick-slide31 .img-bg-prod {
+  background-image: url("/arquivos/mao-vendas.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
 /* PRODUTOS DESKTOP */
 .produtos-desk {
@@ -1282,9 +1475,11 @@ p.text-purple-box span {
   text-align: center;
   font-family: $gil-bold;
   color: #2f2f2f;
+  font-size: 20px;
 }
 .swiper-container {
-  height: 600px;
+  height: 100%;
+  min-height: 720px;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1300,17 +1495,32 @@ p.text-purple-box span {
   filter: blur(0);
 }
 .swiper-pagination {
-  top: 450px !important;
+  position: relative;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;
+}
+.swiper-pagination-bullet {
+  background: white;
+  opacity: initial;
+  width: 10px;
+  height: 10px;
+}
+.swiper-pagination-bullet-active {
+  background: $color-pink-dark;
+  opacity: initial;
+  box-shadow: 0 0 0 2px white;
 }
 .btn-comprar-prod-desk {
   position: relative;
-  top: -85px;
-  z-index: 10;
   text-align: center;
+  top: 30px;
+  z-index: 9;
 }
 .btn-comprar-prod-desk a {
   font-family: $gil-bold;
-  color: $color-red;
+  color: #b81455;
+  font-size: 15px;
 }
 .btn-comprar-prod-desk a::before {
   content: url("/arquivos/bd-red-left.png");
@@ -1321,30 +1531,66 @@ p.text-purple-box span {
   position: absolute;
 }
 .btn-comprar-prod-desk a span {
-  padding-left: 15px;
-  padding-right: 10px;
+  padding-left: 30px;
+  padding-right: 25px;
 }
 .wrapper-box-prod-desk {
   position: relative;
   background-color: $color-white;
-  width: 240px;
+  width: 260px;
   height: 170px;
   top: -230px;
-  right: -304px;
+  right: -295px;
   border: 1px solid $color-white;
   border-radius: 0px 10px 40px 0px;
   z-index: -1;
   box-shadow: -10px 5px 11px -11px rgba(0,0,0,0.49);
 }
-.white-box-prod-desk {
+.wrapper-box-prod-mob {
+  position: relative;
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  border-radius: 0px 10px 40px 20px;
+  z-index: -1;
+  box-shadow: -10px 5px 11px -11px rgba(0,0,0,0.49);
+  width: 200px;
+  height: 160px;
+  top: -19px;
+  right: 0px;
+  left: 33px;
+}
+.wrapper-box-prod-mob .white-box-prod-desk {
   position: absolute;
-  top: 10px;
-  left: 94px;
+  top: 20px;
   bottom: 0px;
   right: 10px;
   left: 10px;
   height: 148px;
   overflow: hidden;
+  padding: 10px;
+}
+.wrapper-box-prod-mob .white-box-prod-desk span {
+  position: relative;
+  top: -10px;
+}
+
+
+.white-box-prod-desk {
+  position: absolute;
+  top: 10px;
+  bottom: 0px;
+  right: 10px;
+  left: 10px;
+  height: 148px;
+  overflow: hidden;
+}
+.white-box-prod-desk p {
+  font-family: $gil-regular;
+  font-size: 14px;
+}
+.white-box-prod-desk p span {
+  font-family: $gil-bold;
+  font-size: 14px;
 }
 .suco-fruta-cont,
 .nectares-cont,
@@ -1371,6 +1617,10 @@ p.text-purple-box span {
   position: relative;
   height: 100px;
   margin-bottom: -70px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .left-btn-prod-desk {
   position: absolute;
@@ -1396,14 +1646,11 @@ p.text-purple-box span {
   height: auto;
 }
 .text-produtos-desk .tit-darkPink-desk {
-  padding: 50px 0 0;
+  padding: 70px 0 0;
   font-size: 45px;
 }
-.text-produtos-desk .text-darkGray-desk {
-  font-size: 1.1rem;
-}
 .center-btns-prod-desk svg {
-  width: 48px;
+  width: 60px;
   padding: 10px;
   cursor: pointer;
   margin-left: 10px;
@@ -1415,20 +1662,7 @@ p.text-purple-box span {
 .center-btns-prod-desk button:focus {
   outline: none;
 }
-#btn-pro1::before {
-  content: "";
-  background: url("/arquivos/btn-left-prod.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 727px;
-  bottom: 0;
-  height: 48px;
-  z-index: -1;
-}
+
 #btn-pro1::after,
 #btn-pro2::after,
 #btn-pro3::after,
@@ -1438,27 +1672,12 @@ p.text-purple-box span {
 #btn-pro7::after,
 #btn-pro8::after,
 #btn-pro9::after,
-#btn-pro10::after
- {
+#btn-pro10::after {
   content: '';
   position: relative;
   top: 0;
   left: 0;
   border-right: 1px solid #a5a5a5;
-}
-#btn-pro11::after {
-  content: "";
-  background: url("/arquivos/btn-right-prod.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  left: 760px;
-  right: 0;
-  bottom: 0;
-  height: 48px;
-  z-index: -1;
 }
 .tooltip-inner {
   background-color: $color-pink-dark !important;
@@ -1467,6 +1686,36 @@ p.text-purple-box span {
 .tooltip.bs-tooltip-bottom .arrow::before {
   border-bottom-color: $color-pink-dark !important;
 }
+.bs-tooltip-auto[x-placement^=top] .arrow::before, 
+.bs-tooltip-top .arrow::before {
+  border-top-color: $color-pink-dark !important;
+}
+.bs-tooltip-auto[x-placement^=right] .arrow::before, 
+.bs-tooltip-right .arrow::before {
+  border-right-color: $color-pink-dark !important;
+}
+.txt-apartir {
+  font-family: $gil-bold;
+  font-size: 13px;
+  text-align: center;
+  color: #2f2f2f;
+  text-transform: uppercase;
+  position: relative;
+  top: 90px;
+}
+.txt-apartir::before {
+  content: "";
+  background-image: url("/arquivos/barra-top-prod.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 
 /* RED DESKTOP */
 .red-desk {
@@ -1491,7 +1740,7 @@ p.text-purple-box span {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: -24px;
+  bottom: -20px;
   right: 0;
   z-index: 2;
 }
@@ -1564,7 +1813,7 @@ p.text-purple-box span {
   position: relative;
   z-index: 9;
   left: 0;
-  top: 10px;
+  top: 40px;
 }
 .btn-quero-minha-purple {
   border: 0px solid transparent;
@@ -1629,7 +1878,7 @@ p.text-purple-box span {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: -24px;
+  bottom: -20px;
   right: 0;
   z-index: 1;
 }
@@ -1887,9 +2136,6 @@ button.btn.btn-link {
   font-size: 10px;
   margin: 1rem;
 }
-.selos-footer-mob {
-  padding: 1rem;
-}
 .line-footer {
   border-top: 5px solid $color-pink-dark;
   border-bottom: 5px solid $color-gray-bg-vendas;
@@ -1904,12 +2150,72 @@ button.btn.btn-link {
 }
 
 /* MEDIA QUERY */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 596px) {
+  .texts-yellow p.tit-green-desk {
+    padding-top: 60px;
+    line-height: 50px;
+  }
+  .texts-yellow p.text-darkGray-desk {
+    padding: 25px 25px 10px 25px;
+  }
   .footer-style {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .duvidas-desk {
-    padding-bottom: 80px;
+    padding-top: 50px;
+  }
+  .links-bottom-vendas-desk div a {
+    font-size: 10px;
+  }
+  .right-blue-mob .texts-top-blue .text-white-desk {
+    font-size: 14px;
+  }
+  .right-blue-mob .texts-top-blue .text-white-desk span {
+    font-size: 14px;
+  }
+  .texts-bottom-blue .text-white-desk {
+    font-size: 14px;
+  }
+  .texts-bottom-blue .text-white-desk span {
+    font-size: 14px;
+  }
+  .right-blue-mob .texts-top-blue .btn-comprar-blue-desk a,
+  .texts-bottom-blue .btn-comprar-blue-desk a {
+  font-size: 11px;
+  }
+  .right-blue-mob {
+    position: relative;
+    padding-top: 60px;
+  }
+  .btn-comprar-blue-desk a span {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  .btn-comprar-blue-desk a span.btn-assine-agora {
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+  .tit-prod-desk {
+    display: none;
+  }
+  .center-blue {
+    top: 100px;
+  }
+}
+@media screen and (min-width: 596px) {
+  .wrapper-box-prod-mob {
+    width: 240px;
+    height: 120px;
+  }
+  .txt-apartir {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .blue-desk {
+    height: 850px;
   }
   .preco-promo {
     font-size: 9px;
@@ -1935,29 +2241,6 @@ button.btn.btn-link {
   .wrapper-box-prod-desk {
     width: 208px !important;
   }
-
-  .btn-left,
-  .btn-center,
-  .btn-right {
-    padding: 0;
-  }
-  .btn-left img,
-  .btn-center img {
-    max-width: auto;
-  }
-  .btn-right img {
-    max-width: auto;
-  }
-  .nome,
-  .descricao {
-    padding-left: 0;
-  }
-}
-@media screen and (min-width: 640px) {
-  .footer-style {
-    margin-bottom: 60px;
-  }
-
 }
 @media screen and (min-width: 768px) {
   .tit-yellow-red-2::before {
@@ -1966,30 +2249,34 @@ button.btn.btn-link {
   .tit-yellow-red-3::before {
     top: 30px;
   }
-  .footer-style {
-    margin-bottom: 0;
+  .center-blue {
+    top: 0;
   }
 }
 @media screen and (max-width: 768px) {
   .texts-bottom-blue {
     padding-top: 40px;
   }
-  .right-blue-mob {
-    position: relative;
-    left: -25px;
-    padding-top: 60px;
-  }
-  .blue-desk {
-    height: 820px;
-  }
   .nav-item a {
     color: $color-white;
   }
-  .text-purple-box {
-    font-size: 12px;
+  .logo-amb-bras {
+    position: relative;
+    bottom: -20px;
   }
 }
 @media screen and (min-width: 992px) {
+  .swiper-container {
+    min-height: 560px;
+    height: 400px;
+    padding-bottom: 0;
+  }
+  .btn-comprar-prod-desk {
+    top: -130px;
+  }
+  .wrapper-box-prod-mob {
+    display: none;
+  }
   .gif-red-desk {
     padding-right: 30px;
   }
@@ -2005,7 +2292,7 @@ button.btn.btn-link {
   }
   .texts-red {
     padding-top: 0;
-    padding-right: 120px;
+    padding-right: 80px;
   }
   .gif-red-desk img {
     max-width: 350px;
@@ -2013,7 +2300,8 @@ button.btn.btn-link {
   .btn-play-red {
     text-align: right;
     right: 47px;
-    top: 42px;
+    top: 63px;
+    cursor: pointer;
   }
   .texts-red .tit-yellow-red-1,
   .texts-red .tit-yellow-red-2,
@@ -2026,15 +2314,45 @@ button.btn.btn-link {
     font-family: $gil-regular;
     color: $color-white;
   }
+  .swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 150px;
+  }
+  .comparar-vendas1-desk {
+    right: -40px;
+  }
+  .frete-vendas1-desk {
+    left: -40px;
+  }
 }
 @media screen and (max-width: 992px) {
+  #content {
+    height: 900px;
+  }
+  .smart-maca-desk,
+  .smart-talheres-desk,
+  .smart-tenis-desk,
+  .smart-food-desk,
+  .smart-drink-desk {
+    height: 900px;
+  }
+  .center-btns-prod-desk::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+  }
+  .center-btns-prod-desk {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
   .btn-quero-minha {
     margin: 0 auto;
     padding-top: 30px;
-  }
-  .swiper-wrapper {
-    position: relative;
-    left: -115px;
   }
   .btn-green-yellow {
     text-align: center;
@@ -2057,59 +2375,11 @@ button.btn.btn-link {
     left: -25px;
     padding-bottom: 30px;
   }
-  .links-bottom-vendas-desk .frete-vendas1-desk,
-  .links-bottom-vendas-desk .comparar-vendas1-desk {
-    text-align: center;
-  }
-  .links-bottom-vendas-desk {
-    padding-bottom: 50px;
-  }
-  .links-bottom-vendas-desk div {
-    text-align: center;
-    line-height: 10px;
-  }
-  .links-bottom-vendas-desk div a {
-    font-size: 10px;
-    text-align: center;
-  }
-  .wrap-menu-prod-desk::before {
-    content: "";
-    position: absolute;
-    background: #efefef;
-    width: auto;
-    height: 60px;
-    left: -40px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .center-btns-prod-desk::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-  }
-  .center-btns-prod-desk {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin-left: 45%;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-  }
-  .center-btns-prod-desk svg {
-    width: 60px;
-  }
   #btn1::before,
   #btn2::before,
   #btn3::before,
   #btn4::before,
-  #btn5::before,
-  #btn-pro1::before,
-  #btn-pro11::after {
+  #btn5::before {
     display: none;
   }
   #btn5 {
@@ -2149,13 +2419,6 @@ button.btn.btn-link {
     top: 0;
     left: 0;
     border-right: 1px solid #a5a5a5;
-  }
-  .swiper-container {
-    height: 800px;
-    width: 100%;
-  }
-  .swiper-pagination {
-    top: 625px !important;
   }
   .texts-smart-desk .tit-white-desk {
     position: relative;
@@ -2204,11 +2467,7 @@ button.btn.btn-link {
     height: auto;
   }
   .wrapper-box-prod-desk {
-    width: 240px;
-    height: 170px;
-    top: -19px;
-    right: 0px;
-    left: 33px;
+    display: none;
   }
   .tit-yellow-red-1::before {
     background-position: top;
@@ -2235,9 +2494,6 @@ button.btn.btn-link {
   .left-blue {
     right: -10px;
   }
-  .center-blue img {
-    max-width: 280px;
-  }
   .wrap-menu-smart-desk {
     left: 8%;
   }
@@ -2245,18 +2501,53 @@ button.btn.btn-link {
     padding-left: 10px;
     padding-right: 4px;
   }
-  .dest-video-desk {
-    height: 550px;
+}
+@media screen and (min-width: 800px) {
+  .center-btns-prod-desk svg {
+    width: 75px;
   }
 }
-
 @media screen and (min-width: 1000px) {
+  .center-btns-prod-desk svg {
+    width: 48px;
+  }
   .box-pink-smart {
     right: -320px;
     padding-right: 100px;
   }
   .box-purple-smart {
     right: -300px;
+  }
+  #btn-pro1::before {
+    content: "";
+    background: url("/arquivos/btn-left-prod.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 727px;
+    bottom: 0;
+    height: 48px;
+    z-index: -1;
+  }
+  #btn-pro11::after {
+    content: "";
+    background: url("/arquivos/btn-right-prod.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 760px;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    z-index: -1;
+  }
+  .wrap-menu-prod-desk {
+    left: -25px;
   }
 }
 @media screen and (min-width: 1400px) {
